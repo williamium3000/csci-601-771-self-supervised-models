@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <meta property="og:site_name" content="CSCI 601.771 (Semi-supervised Models)">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CSCI 601.771 (Semi-supervised Models)">
+    <meta property="og:description" content="Disussing latest breakthroughs with Transformers in diverse domains">
+    <meta property="og:url" content="https://cs25.stanford.edu/">
+    <meta property="og:image" content="https://cs25.stanford.edu/images/cs25.jpeg">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS25: Tranformers United!">
+    <meta name="twitter:description" content="Disussing latest breakthroughs with Transformers in diverse domains">
+    <meta name="twitter:url" content="https://cs25.stanford.edu/">
+    <meta name="twitter:image" content="https://cs25.stanford.edu/images/cs25.jpeg">
+    <meta name="twitter:site" content="@DivGarg9">
+
+    <title>CSCI 601.771: Semi-supervised Models </title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="files/bootstrap.min.css">
+
+    <!-- Google fonts -->
+    <link href="files/fonts.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="files/style.css">
+    <link rel="stylesheet" href="files/font-awesome.min.css">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
+
+<!-- <script src="header.js"></script> -->
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand brand" href="index.html">CSCI 601.771</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#course">Course</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<div id="header" style="text-align:center">
+    <img src="files/blank.png" class="logo-left">
+    <a href="https://www.cs.jhu.edu/">
+        <img src="files/jhu_shield.png" class="logo-right">
+    </a>
+    <h1>CSCI 601.771: Semi-supervised Models</h1>
+    <h3>Johns Hopkins University - Fall 2022</h3>
+    <div style="clear:both;"></div>
+</div>
+
+<!-- Intro -->
+<div class="container sec" id="intro">
+    <p>
+        The rise of massive self-supervised (pre-trained) models has transformed various data-driven fields such as
+        natural language processing, computer vision, robotics, and medical imaging.
+        This advanced graduate course aims to provide a holistic view of the issues related to these models: We will
+        start with the history of how we got here, and then delve into the latest success stories. We will then focus on
+        the implications of these technologies: social harms, security risks, legal issues, and environmental impacts.
+        The class ends with reflections on the future implications of this trajectory.
+    </p>
+
+    <p>
+        <strong>Prerequisites</strong>:
+        Students must have extensive experience with machine learning, artificial intelligence, and natural language
+        processing.
+        Fluency with linear algebra, statistics and one of the Deep Learning libraries (PyTorch, Tensorflow, JAX, etc.)
+        is highly recommended.
+    </p>
+
+</div>
+
+<!-- Staff Info -->
+<div class="sechighlight">
+    <div class="container sec" id="people">
+        <!-- <div class="row"> -->
+        <div class="col-md-7">
+            <h3>Instructors</h3>
+            <div class="instructor">
+                <a target="_blank" rel="noopener noreferrer" href="http://danielkhashabi.com/">
+                    <div class="instructorphoto"><img src="files/daniel.jpeg"></div>
+                    <div>Daniel Khashabi</div>
+                </a>
+            </div>
+            <div class="instructor">
+                <a target="_blank" rel="noopener noreferrer" href="?">
+                    <div class="instructorphoto"><img src="files/blank.png"></div>
+                    <div>John Doe <br>(Teaching Assistant)</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logistics -->
+    <div class="container sec" id="logistics">
+        <h2>Logistics</h2>
+
+        <ul>
+            <li><b>Classes</b> are on Tueday/Thursday 1:30 - 2:45 pm EST (Malone 228)
+            </li>
+            <li><b>Class Structure</b>: The class will be in-person. Each session will involve the presentation and/or
+                discussion of recent important papers on the self-supervised statistical models. The course also
+                involves a project.
+            </li>
+            <li><b>Contact</b>: If you have any questions about the course, contact us at TBD
+            </li>
+        </ul>
+        <br>
+    </div>
+</div>
+
+
+<!-- Guest Speakers -->
+<!-- <div class="sechighlight"> -->
+<div class="container sec" id="course">
+    <h2>Content</h2>
+    <p> The bulk of this class will comprise of talks from researchers discussing latest breakthroughs with transformers
+        and explaining how they apply them to their fields of research.
+        The objective of the course is to bring together the ideas from ML, NLP, CV, biology and other communities on
+        transformers, understand their broad implications, and spark cross-collaborative research.
+    </p>
+    <!-- <ul>
+      <li><strong><a href="https://scholar.google.com/citations?user=p2gwhK4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Lucas Beyer</a></strong>: Applications in Vision (ViT) [<a href="https://arxiv.org/abs/2010.11929" target="_blank" rel="noopener noreferrer">link</a>]</li>
+      <li><strong><a href="https://aditya-grover.github.io/" target="_blank" rel="noopener noreferrer">Aditya Grover</a></strong>: Transformers in RL/Universal Compute Engines [<a href="https://arxiv.org/abs/2103.05247" target="_blank" rel="noopener noreferrer">link</a>] </li>
+      <li><strong><a href="https://barretzoph.github.io/" target="_blank" rel="noopener noreferrer">Barret Zoph</a></strong>: Scaling Transformers [<a href="https://arxiv.org/abs/2101.03961" target="_blank" rel="noopener noreferrer">link</a>] </li>
+      <li><strong><a href="https://scholar.google.ca/citations?user=2oq9614AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Aidan Gomez</a></strong>: Self Attention and Non Parametric Transformers [<a href="https://arxiv.org/abs/2106.02584v1" target="_blank" rel="noopener noreferrer">link</a>] </li>   
+      <li><strong><a href="https://www.cs.toronto.edu/~hinton/" target="_blank" rel="noopener noreferrer">Geoffrey Hinton</a></strong>: GLOM [<a href="https://arxiv.org/abs/2102.12627" target="_blank" rel="noopener noreferrer">link</a>] </li>
+     <li><strong><a href="https://colah.github.io" target="_blank" rel="noopener noreferrer">Chris Olah</a></strong>: Interpretability with transformers [<a href="https://openai.com/blog/multimodal-neurons/" target="_blank" rel="noopener noreferrer">link</a>] </li>       
+    </ul> -->
+</div>
+<!-- </div> -->
+<!-- Note the margin-top:-20px and the <br> serve to make the #schedule hyperlink display correctly (with the h2 header visible) -->
+<div class="container sec" id="schedule" style="margin-top:-20px">
+    <br>
+    <h2>Schedule</h2>
+    <p> The current class schedule is below (subject to change): </p>
+
+    <table class="table">
+        <colgroup>
+            <col style="width:20%">
+            <col style="width:40%">
+            <col style="width:40%">
+
+        </colgroup>
+        <thead>
+        <tr class="active">
+            <th>Date</th>
+            <th>Description</th>
+            <th>Course Materials</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>#1 - Tue Aug 30</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#2 - Thu Sept 1</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#3 - Tue Sept 6</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#4 - Thu Sept 8</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#5 - Tue Sept 13</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#6 - Thu Sept 15</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#7 - Tue Sept 20</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#8 - Thu Sept 22</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#9 - Tue Sept 27</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#10 - Thu Sept 29</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#11 - Tue Oct 4</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#12 - Thu Oct 6</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#13 - Tue Oct 11</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#14 - Thu Oct 13</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#15 - Tue Oct 18</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#16 - Thu Oct 20</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#17 - Tue Oct 25</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#18 - Thu Oct 27</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#19 - Tue Nov 1</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#20 - Thu Nov 3</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#21 - Tue Nov 8</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#22 - Thu Nov 10</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#23 - Tue Nov 15</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#24 - Thu Nov 17</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#25 - Tue Nov 22</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#26 - Thu Nov 24</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#27 - Tue Nov 29</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#28 - Thu Dec 1</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#29 - Tue Dec 6</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#30 - Thu Dec 8</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#31 - Tue Dec 13</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#32 - Thu Dec 15</td>
+            <td>Introduction to Transformers</td>
+            <td>
+                Main Reading(s):
+                <ol>
+                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
+                </ol>
+
+                Additional Reading(s):
+                <ol>
+                </ol>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<!-- jQuery and Bootstrap -->
+<script src="files/jquery.min.js"></script>
+<script src="files/bootstrap.min.js"></script>
+
+
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
