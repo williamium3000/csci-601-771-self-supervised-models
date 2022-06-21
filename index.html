@@ -32,6 +32,9 @@
     <link rel="stylesheet" type="text/css" href="files/style.css">
     <link rel="stylesheet" href="files/font-awesome.min.css">
 
+    <!--favicon-->
+    <link rel="shortcut icon" href="files/favicon.ico"/>
+
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.1063.0" data-gr-ext-installed="">
@@ -54,6 +57,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#course">Course</a></li>
                 <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="https://github.com/JHU-CLSP/csci-601-771-self-supervised-models">Edit this page!</a></li>
             </ul>
         </div>
     </div>
@@ -61,11 +66,14 @@
 
 <!-- Header -->
 <div id="header" style="text-align:center">
-    <img src="files/blank.png" class="logo-left">
+    <!--    <img src="files/blank.png" class="logo-left">-->
     <a href="https://www.cs.jhu.edu/">
         <img src="files/jhu_shield.png" class="logo-right">
     </a>
-    <h1>CSCI 601.771: Semi-supervised Models</h1>
+    <a href="https://www.clsp.jhu.edu/">
+        <img src="files/clsp-logo.png" class="logo-right">
+    </a>
+    <h1>CSCI 601.771: Semi-supervised Statistical Models</h1>
     <h3>Johns Hopkins University - Fall 2022</h3>
     <div style="clear:both;"></div>
 </div>
@@ -83,10 +91,12 @@
 
     <p>
         <strong>Prerequisites</strong>:
-        Students must have extensive experience with machine learning, artificial intelligence, and natural language
-        processing.
-        Fluency with linear algebra, statistics and one of the Deep Learning libraries (PyTorch, Tensorflow, JAX, etc.)
-        is highly recommended.
+        Students must have extensive experience with deep learning, machine learning, artificial intelligence, and
+        natural language processing.
+        <!--  Fluency with linear algebra, statistics and one of the Deep Learning libraries (PyTorch, Tensorflow, JAX, etc.) is highly recommended.--->
+        Familiarity with linear algebra, statistics and probability are necessary, as well as with the design and
+        implementation of learning models (via one of the learing libraries, such as PyTorch, Tensorflow, Keras, JAX).
+        Students must be comfortable with reading papers and extracting key concepts and ideas from papers.
     </p>
 
 </div>
@@ -94,19 +104,18 @@
 <!-- Staff Info -->
 <div class="sechighlight">
     <div class="container sec" id="people">
-        <!-- <div class="row"> -->
-        <div class="col-md-7">
+        <div class="col-md-7" style="width: 100%; text-align: center">
             <h3>Instructors</h3>
             <div class="instructor">
                 <a target="_blank" rel="noopener noreferrer" href="http://danielkhashabi.com/">
-                    <div class="instructorphoto"><img src="files/daniel.jpeg"></div>
+                    <div class="instructorphoto"><img src="files/daniel.jpeg" alt="missing image"></div>
                     <div>Daniel Khashabi</div>
                 </a>
             </div>
             <div class="instructor">
                 <a target="_blank" rel="noopener noreferrer" href="?">
                     <div class="instructorphoto"><img src="files/blank.png"></div>
-                    <div>John Doe <br>(Teaching Assistant)</div>
+                    <div>J. Doe <br>(Teaching Assistant)</div>
                 </a>
             </div>
         </div>
@@ -115,42 +124,100 @@
     <!-- Logistics -->
     <div class="container sec" id="logistics">
         <h2>Logistics</h2>
-
         <ul>
-            <li><b>Classes</b> are on Tueday/Thursday 1:30 - 2:45 pm EST (Malone 228)
-            </li>
+            <li><b>Classes</b> are on Tuesday/Thursday 1:30 - 2:45 pm EST (Malone 228)</li>
             <li><b>Class Structure</b>: The class will be in-person. Each session will involve the presentation and/or
                 discussion of recent important papers on the self-supervised statistical models. The course also
                 involves a project.
             </li>
-            <li><b>Contact</b>: If you have any questions about the course, contact us at TBD
+            <li><b>Coursework</b>: Your grade is based on three activities: paper presentation (45%), in-class
+                participation in discussions (15%) and the class project (40%).
             </li>
+            <li><b>Contact</b>: If you have any questions about the course, contact us at TBD.</li>
         </ul>
         <br>
     </div>
 </div>
 
 
-<!-- Guest Speakers -->
-<!-- <div class="sechighlight"> -->
 <div class="container sec" id="course">
     <h2>Content</h2>
-    <p> The bulk of this class will comprise of talks from researchers discussing latest breakthroughs with transformers
-        and explaining how they apply them to their fields of research.
-        The objective of the course is to bring together the ideas from ML, NLP, CV, biology and other communities on
-        transformers, understand their broad implications, and spark cross-collaborative research.
+    <p> For much of the semester, each class will involve the presentation and discussion of recent important papers on
+        pre-trained (self-supervised) statistical models.
+        <!--        The bulk of this class will comprise of talks from researchers discussing latest breakthroughs with transformers-->
+        <!--        and explaining how they apply them to their fields of research.-->
+        The objective of the course is to instill a holistic view of the latest developments in various fields (NLP,
+        computer vision, biology. etc.), and help the participants understand their broad implications.
     </p>
-    <!-- <ul>
-      <li><strong><a href="https://scholar.google.com/citations?user=p2gwhK4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Lucas Beyer</a></strong>: Applications in Vision (ViT) [<a href="https://arxiv.org/abs/2010.11929" target="_blank" rel="noopener noreferrer">link</a>]</li>
-      <li><strong><a href="https://aditya-grover.github.io/" target="_blank" rel="noopener noreferrer">Aditya Grover</a></strong>: Transformers in RL/Universal Compute Engines [<a href="https://arxiv.org/abs/2103.05247" target="_blank" rel="noopener noreferrer">link</a>] </li>
-      <li><strong><a href="https://barretzoph.github.io/" target="_blank" rel="noopener noreferrer">Barret Zoph</a></strong>: Scaling Transformers [<a href="https://arxiv.org/abs/2101.03961" target="_blank" rel="noopener noreferrer">link</a>] </li>
-      <li><strong><a href="https://scholar.google.ca/citations?user=2oq9614AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Aidan Gomez</a></strong>: Self Attention and Non Parametric Transformers [<a href="https://arxiv.org/abs/2106.02584v1" target="_blank" rel="noopener noreferrer">link</a>] </li>   
-      <li><strong><a href="https://www.cs.toronto.edu/~hinton/" target="_blank" rel="noopener noreferrer">Geoffrey Hinton</a></strong>: GLOM [<a href="https://arxiv.org/abs/2102.12627" target="_blank" rel="noopener noreferrer">link</a>] </li>
-     <li><strong><a href="https://colah.github.io" target="_blank" rel="noopener noreferrer">Chris Olah</a></strong>: Interpretability with transformers [<a href="https://openai.com/blog/multimodal-neurons/" target="_blank" rel="noopener noreferrer">link</a>] </li>       
-    </ul> -->
+
+    <p>
+        Each paper will be presented by a group of students each with an assigned <a
+            href="https://colinraffel.com/blog/role-playing-seminar.html">"role"</a>. This role defines the lens
+        through which they read the paper and determines what they prepare for the group in-class discussion.
+        Here are the roles we will experiment with:
+    </p>
+    <ul>
+        <li><b>Stakeholder ✍️:</b> Act as if you're the authors of this paper. Describes their motivation, problem
+            definition, method and experimental findings of this paper.
+        </li>
+        <li><b>Scientific Peer Reviewer 👩🏽‍🔬:</b> Act like you're a reviewer of this work. Be critical of the work,
+            though not necessarily
+            negative. You can follow the guidelines for <a
+                    href="https://nips.cc/Conferences/2020/PaperInformation/ReviewerGuidelines"> NeurIPS reviewers</a>
+            (under "Review Content"), taking note of the example reviews included therein.
+        </li>
+        <li><b>Archaeologist 🏺:</b> Determine where this paper sits in the context of previous and subsequent work.
+            Find
+            and report on one prior paper that substantially influenced the current paper and one newer paper that cites
+            this current paper.
+        </li>
+        <li><b>Visionary 🔭:</b> Propose an imaginary follow-up research project or a new application -- not just based
+            on the current but only possible
+            due to the existence and success of the current paper.
+        </li>
+        <!--        <li><b>Researcher 🍜:</b> Propose an imaginary follow-up project &#45;&#45; not just based on the current but only possible-->
+        <!--            due to the existence and success of the current paper.-->
+        <!--        </li>-->
+        <!--        <li><b>Practitioner 🖥️:</b> Propose a new application for the method in the paper (not already discussed in class),-->
+        <!--            and discuss at least one positive and negative impact of this application.-->
+        <!--        </li>-->
+    </ul>
+    <p>
+        The presentation of each role can be done individually or in groups of ≤3. If done as a group, you and your
+        partner
+        should decide how to equally divide the work for a given paper presentation session.
+    </p>
+    <p><b>Who presents what role and when?</b> At the beginning of the semester, students will be divided into two
+        halves,
+        one half presenting on Tuesdays and the other on Thursdays.
+        <!-- we will split the class into two groups: one group present presents on Tuesdays and the other group presents on Thursdays.-->
+        In a given class session, the students in the presenting half will each be given a random role (determined the
+        week before at the end of the classes).
+        Each role group (irrespective of how many students are assigned to it) should aim for 10 mins presentation.
+        You're encouraged to have slides for your role, though it is not mandatory.
+        <!--        You should present your findings with a formal presentation, i.e., have some slides prepared for the group-->
+        <!--        in-class discussion.-->
+        <!--        Your assigned role determines what you should include in the slides.-->
+        If you do so, I would recommend less than 5-8 slides to make sure stay within our time budget.
+    </p>
+    <p><b>What slides?</b> To minimize time spent context switching or fighting with screen sharing/projector dongles,
+        we will have a shared pool of slides (hosted on Google presentations, will be shared a week before).
+        Each role group are encouraged to title their slides with "<span
+                style="font-family: 'Trebuchet MS', sans-serif;">[role emoji]: [student name]</span>" (as in "<span
+                style="font-family: 'Trebuchet MS', sans-serif;">🏺: Jane,John</span>")
+        so that the slides are quickly identified during the session.
+        If you choose to make slides, you're <b>not</b> expected to
+        prepare a full-blown presentation -- they're encouraged for visual aid and facilitating the presentation.
+    </p>
+    <p><b>What about the non-presenting half?</b>
+        While only a subset of the class will participate in presenting a paper, the rest of the class is expected to
+        come to class ready to participate in the discussions.
+    </p>
 </div>
-<!-- </div> -->
-<!-- Note the margin-top:-20px and the <br> serve to make the #schedule hyperlink display correctly (with the h2 header visible) -->
+
+<!--[TODO: how to change the roles? consult with the instructor]-->
+
+
 <div class="container sec" id="schedule" style="margin-top:-20px">
     <br>
     <h2>Schedule</h2>
@@ -158,9 +225,9 @@
 
     <table class="table">
         <colgroup>
-            <col style="width:20%">
-            <col style="width:40%">
-            <col style="width:40%">
+            <col style="width:15%">
+            <col style="width:35%">
+            <col style="width:60%">
 
         </colgroup>
         <thead>
@@ -173,16 +240,17 @@
         <tbody>
         <tr>
             <td>#1 - Tue Aug 30</td>
-            <td>Introduction to Transformers</td>
+            <td>Course overview: plan and expectations</td>
             <td>
-                Main Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
-                </ol>
 
-                Additional Reading(s):
-                <ol>
-                </ol>
+                <!--                Main Reading(s):-->
+                <!--                <ol>-->
+                <!--                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>-->
+                <!--                </ol>-->
+
+                <!--                Additional Reading(s):-->
+                <!--                <ol>-->
+                <!--                </ol>-->
             </td>
         </tr>
         <tr>
@@ -624,11 +692,116 @@
     </table>
 </div>
 
+<div class="container sechighlight" id="project">
+    <h2>Project</h2>
+    <p>
+        All students in the class will write a "mini-paper" as a final project. The topic of this project is open-ended.
+        This project, for example, can focus on demonstrate systemic limitations of a prior work
+        or suggesting improvements on methods or benchmarks discussed in the class.
+        <!--        reproducing one or more papers covered in the class (or relevant works)-->
+        <!--        or extending them.-->
+    </p>
+    <ul>
+        <li><b>Group work:</b> Students are expected to work in groups on the final project (team sizes limited to 2 or
+            3 people). Students in groups are required to include a “contributions” section concretely lists each
+            author’s contributions (see Section 8 of this paper, for example). The length of the final report should be
+            5 to 8 pages. Note that longer reports are not necessarily better.
+        </li>
+        <li><b>Project proposals:</b> All groups will be required to submit a project proposal by the start of class on
+            TBD. The project proposal is a single-paragraph description of what you intend to do (experiments, datasets,
+            methods, etc.) The instructors will provide feedback on these ideas to help the teams with finding a
+            concrete idea. There will be lightning presentations of the finalized proposals on TBD.
+        </li>
+        <li><b>Midway progress presentation:</b> Groups will present their halfway progress during a mid-way project
+            presentation. This is expected to be a short presentation discussing the progress made for each project and
+            any remaining hurdles.
+        </li>
+        <li><b>Final presentation:</b> The final project presentation will be during the final exam period. All students
+            in each group are required to present some material during the final presentation.
+        </li>
+        <li><b>Final Report:</b> Students should write code and carry out additional experiments and then write up the
+            results in a standard conference paper format (<a
+                    href="https://www.overleaf.com/latex/templates/neurips-2022/kxymzbjpwsqx">template</a>). The final
+            reports are due TBD.
+        </li>
+    </ul>
+</div>
+
+<div class="container sec" id="resources">
+    <h2>Relevant Resources</h2>
+    <p>Here are several resources available for free:</p>
+    <ul>
+        <li>GPU Access:
+            <ul>
+                <li>Grad students should have access to the graduate grid, which has GPUs.</li>
+                <li>Undergraduate students should have access to the undergrad grid (TODO: check).</li>
+                <li><a href="https://colab.research.google.com/">Google Colab</a> provides free GPU usage for up to 12
+                    hours/day for academic purposes. One can obtain <a
+                            href="https://medium.com/@yufengg/how-to-upgrade-colab-with-more-compute-64d53a9b05dc"> more
+                        compute on Colab</a> with relatively minimal pay.
+                </li>
+                <li><a href="https://www.kaggle.com/general/108481">Kaggle</a> offers GPUs for its users.</li>
+                <li><a href="https://aws.amazon.com/education/awseducate/">AWS</a> and <a
+                        href="https://azure.microsoft.com/en-us/free/students/">Azure</a> both offer welcome credits to
+                    students.
+                </li>
+            </ul>
+        </li>
+        <li>Demos:
+            <ul>
+                <li><a href="https://6b.eleuther.ai">GPT-J demo</a></li>
+                <li><a href="https://c4-search.apps.allenai.org">A queryable interface to C4</a></li>
+                <li><a href="https://vision-explorer.allenai.org">AllenAI vision demo</a></li>
+                <li><a href="https://demo.allennlp.org">AllenNLP demo</a></li>
+            </ul>
+        </li>
+        <li>Tutorials:</li>
+        <ul>
+            <li><a href="https://pytorch.org/tutorials/">These tutorials</a> do a good job of introducing PyTorch.</li>
+            <li>A <a href="https://huggingface.co/course/chapter1/1">course</a> on Huggingface's Transformers library.
+            </li>
+        </ul>
+    </ul>
+    <p>
+        Besides these resources, we will try our best to satisfy individual needs through discussion.
+    </p>
+</div>
+
+
+<div class="container sec" id="conduct">
+    <h2>Conduct</h2>
+    <p>
+        Since this is a discussion class, it's especially important that we respect everyone's perspective and input. In
+        particular, I value the perspectives of individuals from all backgrounds reflecting the diversity of our
+        students. I will strive to make this classroom an inclusive space for all students. Please let me know if there
+        is anything I can do to improve.
+    </p>
+    <p>
+        This course will have a zero-tolerance philosophy regarding <a
+            href="https://www.cs.jhu.edu/academic-programs/academic-integrity-code/">plagiarism or other forms of
+        cheating</a>, and incidents
+        of academic dishonesty will be reported. A student who has doubts about how the Honor Code applies to this
+        course should obtain specific guidance from the course instructor before submitting the respective assignment.
+    </p>
+</div>
+
+<div class="container sec" id="relevant-courses">
+    <h2>Relevant Courses</h2>
+    <ul>
+        <li><a href="https://stanford-cs324.github.io/winter2022/"> Stanford CS324 - Large Language Models</a>: content inspiration</li>
+        <li><a href="https://web.stanford.edu/class/cs25/"> Stanford CS25: Transformers United!</a>: content inspiration </li>
+        <li><a href="https://github.com/craffel/dl3d-seminar"> UNC COMP790: (Deep) Learning with Limited Labeled Data
+            (DL3D)</a>: role-playing format inspiration</li>
+        <li><a href="https://isminoula.github.io/cs6604SP21/"> Virginia Tech CS 6604: Data Challenges in Machine
+            Learning</a></li>
+    </ul>
+</div>
+
+
 <!-- jQuery and Bootstrap -->
 <script src="files/jquery.min.js"></script>
 <script src="files/bootstrap.min.js"></script>
 
 
 </body>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 </html>
