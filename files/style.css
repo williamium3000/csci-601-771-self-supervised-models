@@ -292,9 +292,9 @@ html {
   scroll-behavior: smooth;
 }
 
-li{
-  font-size: 10pt;
-}
+/*li{*/
+/*  font-size: 10pt;*/
+/*}*/
 
 /* unvisited link */
 a:link {
