@@ -70,7 +70,7 @@ h3 {
   display: inline-block;
   width: 140px;
   text-align: center;
-  margin-right: 20px;
+  /*margin-right: 20px;*/
   margin-bottom: 5px;
   font-size: 14px;
 }
