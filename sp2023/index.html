@@ -16,7 +16,7 @@
     <meta name="twitter:description" content="Discussing latest breakthroughs in self-supervised language models">
     <meta name="twitter:url" content="https://self-supervised.cs.jhu.edu/">
 
-    <title>CSCI  601.471/671: Self-supervised Models </title>
+    <title>CSCI 601.471/671: Self-supervised Models </title>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="files/bootstrap.min.css">
@@ -50,10 +50,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#course">Course</a></li>
+                <li><a href="#course">Content</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#project">Project</a></li>
-                <li><a href="https://github.com/JHU-CLSP/csci-601-771-self-supervised-models">Edit this page!</a></li>
+                <li><a href="https://github.com/JHU-CLSP/csci-601-771-self-supervised-models">Suggest an edit</a></li>
             </ul>
         </div>
     </div>
@@ -65,10 +65,10 @@
     <a href="https://www.cs.jhu.edu/">
         <img src="files/jhu_shield.png" class="logo-right">
     </a>
-<!--    <a href="https://www.clsp.jhu.edu/">-->
-<!--        <img src="files/clsp-logo.png" class="logo-right">-->
-<!--    </a>-->
-    <h1>CSCI 601.471/671   NLP: Self-supervised Models</h1>
+    <!--    <a href="https://www.clsp.jhu.edu/">-->
+    <!--        <img src="files/clsp-logo.png" class="logo-right">-->
+    <!--    </a>-->
+    <h1>CSCI 601.471/671 NLP: Self-supervised Models</h1>
     <h3>Johns Hopkins University - Spring 2023</h3>
     <div style="clear:both;"></div>
 </div>
@@ -76,24 +76,26 @@
 <!-- Intro -->
 <div class="container sec" id="intro">
     <p>
-            Check back soon for more information!
-<!--        The rise of massive self-supervised (pre-trained) models has transformed various data-driven fields such as-->
-<!--        natural language processing, computer vision, robotics, and medical imaging.-->
-<!--        This advanced graduate course aims to provide a holistic view of the issues related to these models: We will-->
-<!--        start with the history of how we got here, and then delve into the latest success stories. We will then focus on-->
-<!--        the implications of these technologies: social harms, security risks, legal issues, and environmental impacts.-->
-<!--        The class ends with reflections on the future implications of this trajectory.-->
+        The rise of massive self-supervised (pre-trained) models have transformed various data-driven fields such as
+        natural language processing (NLP). In this course, students will gain a thorough introduction to self-supervised
+        learning techniques for NLP applications. Through lectures, assignments, and a final project, students will
+        learn the necessary skills to design, implement, and understand their own self-supervised neural network models,
+        using the Pytorch framework.
     </p>
 
-<!--    <p>-->
-<!--        <strong>Prerequisites</strong>:-->
-<!--        Students must have extensive experience with deep learning, machine learning, artificial intelligence, and-->
-<!--        natural language processing.-->
-<!--        &lt;!&ndash;  Fluency with linear algebra, statistics and one of the Deep Learning libraries (PyTorch, Tensorflow, JAX, etc.) is highly recommended.-&ndash;&gt;-->
-<!--        Familiarity with linear algebra, statistics and probability are necessary, as well as with the design and-->
-<!--        implementation of learning models (via one of the learing libraries, such as PyTorch, Tensorflow, Keras, JAX).-->
-<!--        Students must be comfortable with reading papers and extracting key concepts and ideas from papers.-->
-<!--    </p>-->
+    <p>
+        <strong>Prerequisites</strong>:
+        (1) Data Structures (601.226),
+        (2) All the class assignments will be in Python/PyTorch. If you don’t know Python or PyTorch but have experience
+        in other programming languages (Java, C++, etc.) you can probably pick Python/PyTorch pretty quickly.
+        (3) Calculus and linear algebra: you should be comfortable with matrix operations (matrix multiplication,
+        transpose, inverse, dot product, gradients).
+        (4) Probability: basic probability properties (conditionals, marginals, mean, standard deviation), distributions
+        (gaussian, categorical).
+        (5) Background in Natural Language Processing & Machine Learning or having finished one of the relevant courses
+        such as Machine Learning (475.675), Artificial Intelligence (464.664), Natural Language Processing (600.465),
+        Machine Translation (600.468), or Introduction to HLT (601.467/667).
+    </p>
 
 </div>
 
@@ -102,7 +104,7 @@
     <div class="container sec" id="people">
         <div class="col-md-5" style="width: 100%; text-align: center">
             <br>
-<!--            <h3>Instructors</h3>-->
+            <!--            <h3>Instructors</h3>-->
             <div class="instructor">
                 <a target="_blank" rel="noopener noreferrer" href="http://danielkhashabi.com/">
                     <div class="instructorphoto"><img src="files/daniel.jpeg" alt="missing image"></div>
@@ -142,32 +144,44 @@
         <h2>Logistics</h2>
         <ul>
             <li><b>Classes:</b> on Tuesday/Thursday 12 - 1:15 pm EST (room: TBD)</li>
-            <li><b>Office hours:</b> by appointment</li>
-            <li><b>Contact:</b> If you have any questions about the course email the instructors (TBD: on canvas? create a google group?).</li>
-            <li><b>Class Structure</b>: The class will be in-person. Each session will involve the presentation and/or
-                discussion of recent important papers on the self-supervised statistical models. The course also
-                involves a project.
+            <li><b>Office hours:</b> TBD</li>
+            <li><b>Contact:</b> If you have any questions about the course email the instructors (TBD: on canvas? create
+                a google group?).
             </li>
-            <li><b>Coursework:</b> Your grade is based on three activities:
-                paper presentation by undertaking your role and present it in a clear and compelling way (33%),
-                in-class participation in discussions for any class that you're not presenting (33%), the class project (33%).
-                Everyone gets one 1% bonus point!
+            <li><b>Virtual or in-person</b>: The class will be in-person. Though there will be recordings of each class
+                made available online after each class on Canvas/Panopto.
             </li>
-            <li><b>Changes:</b> The professor reserves the right to make changes to the syllabus or project due dates. These changes will be announced as early as possible.</li>
-            <li><b>Recordings:</b> Recorded versions of the sessions will be available online after each class on Canvas.</li>
-            <li><b>Attendance and late work:</b>
-                You can miss 3 sessions.
-                Additionally, you get 2 sessions of presentation relief (i.e., you can skip 2 presentation assignments) to accommodate any deadlines you might have.
-                If you decide to use these, make sure to email the instructor in advance (at least two days).
-                Beyond that limit, you'd lose the attendance/presentation credits for any class you miss.
-<!--                If you miss a class without completing the corresponding assignment, you'll get a zero for that session.-->
-<!--                Unfortunately you can't miss a class in which you're "presenting".-->
-<!--                If you have to miss a class where you are in a "presenting" role for that session, you must find someone willing to swap presentations with (e.g., you were expected to present on Tuesday; but you swap presentations with someone who presents on Thursdays).-->
-<!--                Alternatively, you must still create the presentation for that role before the class and you must find someone else to present it for you.-->
-                There's really no way to accept late work.
-<!--                for the readings since it's vital that we're all reading the same papers at the same time.-->
+            <li><b>Changes:</b> The instructor reserves the right to make changes to the syllabus or project due dates.
+                These changes will be announced as early as possible.
             </li>
-            <li><b>COVID:</b> Students who report symptoms associated with COVID-19 are expected not to attend class and to isolate themselves for at least five days and until they have been symptom-free for 24 hours.</li>
+            <li><b>News and announcements:</b> All the news and announcements will be made on Canvas.</li>
+            <!--            <li><b>Attendance and late work:</b>-->
+            <!--                You can miss 3 sessions.-->
+            <!--                Additionally, you get 2 sessions of presentation relief (i.e., you can skip 2 presentation assignments) to accommodate any deadlines you might have.-->
+            <!--                If you decide to use these, make sure to email the instructor in advance (at least two days).-->
+            <!--                Beyond that limit, you'd lose the attendance/presentation credits for any class you miss.-->
+            <!--&lt;!&ndash;                If you miss a class without completing the corresponding assignment, you'll get a zero for that session.&ndash;&gt;-->
+            <!--&lt;!&ndash;                Unfortunately you can't miss a class in which you're "presenting".&ndash;&gt;-->
+            <!--&lt;!&ndash;                If you have to miss a class where you are in a "presenting" role for that session, you must find someone willing to swap presentations with (e.g., you were expected to present on Tuesday; but you swap presentations with someone who presents on Thursdays).&ndash;&gt;-->
+            <!--&lt;!&ndash;                Alternatively, you must still create the presentation for that role before the class and you must find someone else to present it for you.&ndash;&gt;-->
+            <!--                There's really no way to accept late work.-->
+            <!--&lt;!&ndash;                for the readings since it's vital that we're all reading the same papers at the same time.&ndash;&gt;-->
+            <!--            </li>-->
+            <li><b>COVID:</b> Students who report symptoms associated with COVID-19 are expected not to attend class and
+                to isolate themselves for at least five days and until they have been symptom-free for 24 hours.
+            </li>
+
+            <li>
+                <b>Course grade:</b>
+                Your grade is based on the following activities:
+                (1) weekly homework assignments (40%),
+                (2) midterm exams (30%), and
+                (3) a final project (30%).
+                Attendance is not mandatory (hence, 0%) but highly encouraged: participation in class is our chance to
+                learn more effectively.
+                [TBD: additional credits for any activities that improve the class]
+            </li>
+
         </ul>
         <br>
     </div>
@@ -176,96 +190,39 @@
 
 <div class="container sec" id="course">
     <h2>Content</h2>
-    <p> For much of the semester, each class will involve the presentation and discussion of recent important papers on
-        pre-trained (self-supervised) statistical models.
-        <!--        The bulk of this class will comprise of talks from researchers discussing latest breakthroughs with transformers-->
-        <!--        and explaining how they apply them to their fields of research.-->
-        The objective of the course is to instill a holistic view of the latest developments in various fields (NLP,
-        computer vision, biology. etc.), and help the participants understand their broad implications.
-    </p>
-
-
-    <h3>Presenters</h3>
     <p>
-        Each paper will be presented by a group of students each with an assigned <a
-            href="https://colinraffel.com/blog/role-playing-seminar.html">"role"</a>. This role defines the lens
-        through which they read the paper and determines what they prepare for the group in-class discussion.
-        Here are the roles we will experiment with:
+        Each session will involve the instructor-led presentation on a focused topic self-supervised statistical models.
+        There will be weekly homework assignments related to class presentations, two midterm exams and a final project.
     </p>
+
+    <h3>Weekly homework</h3>
+    <p>
+        TBD
+    </p>
+
+    <h3>Midterm exams</h3>
+    <p>
+        TBD
+    </p>
+
+    <h3>Reference text</h3>
+    <p>
+        There is no required text. Though the following can be useful:
     <ul>
-        <li><b>Stakeholder ✍️:</b> Act as if you're the authors of this paper. Describes their motivation, problem
-            definition, method and experimental findings of this paper. (time budget: 15 minutes)
+        <li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing, Jurafsky and Martin</a>
         </li>
-        <li><b>Scientific Reviewer 🔎:</b> Act like you're a reviewer of this work. Be critical of the work,
-            though not necessarily
-            negative. You can follow the guidelines for <a
-                    href="https://nips.cc/Conferences/2020/PaperInformation/ReviewerGuidelines"> NeurIPS reviewers</a>
-            (under "Review Content"), taking note of the example reviews included therein. (time budget: 10 minutes)
-        </li>
-        <li><b>Empiricist 👩🏽‍🔬:</b> Implement something related to the paper.
-            This could be a small part of the paper on a small dataset or toy problem.
-            If you download an existing code or model, you should try least (a toy version of a) the experiments from the paper.
-            Prepare to share your core code and some empirical intuitions on your implementation (what worked, what didn't, what you think is the best way to do it, etc.)
-            (time budget: 10 minutes)
-        </li>
-        <li><s><b>Archaeologist 🏺:</b> Determine where this paper sits in the context of previous and subsequent work.
-            Find
-            and report on one prior paper that substantially influenced the current paper and one newer paper that cites
-            this current paper.
-            (time budget: 10 minutes)
-            </s>
-        </li>
-        <li><b>Visionary 🔭:</b> Propose an imaginary follow-up research project or a new application -- not just based
-            on the current but only possible
-            due to the existence and success of the current paper.
-            (time budget: 10 minutes)
-        </li>
-        <!--        <li><b>Researcher 🍜:</b> Propose an imaginary follow-up project -- not just based on the current but only possible-->
-        <!--            due to the existence and success of the current paper.-->
-        <!--        </li>-->
-        <!--        <li><b>Practitioner 🖥️:</b> Propose a new application for the method in the paper (not already discussed in class),-->
-        <!--            and discuss at least one positive and negative impact of this application.-->
-        <!--        </li>-->
+        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9689868">Natural language processing with PyTorch,
+            Rao, and McMahan</a></li>
+        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9697352">Transformers for Natural Language Processing,
+            Rothman </a></li>
     </ul>
+    </p>
+
+    <h3>Final project</h3>
     <p>
-        The presentation of each role can be done individually or in groups of ≤3. If done as a group, you and your
-        partner
-        should decide how to equally divide the work for a given paper presentation session.
+        TBD
     </p>
-    <p><b>Who presents what role and when?</b> At the beginning of the semester,
-        students will be divided into two
-        halves,  one half presenting on Tuesdays and the other on Thursdays.
-        <!-- we will split the class into two groups: one group present presents on Tuesdays and the other group presents on Thursdays.-->
-        In a given class session, the students in the presenting half will each be given a random role (determined the
-        week before at the end of the classes).
-        Each role group (irrespective of how many students are assigned to it) should aim for specified time budgets for each role.
-        You're encouraged to have slides for your role, though it is not mandatory.
-        <!-- You should present your findings with a formal presentation, i.e., have some slides prepared for the group-->
-        <!-- in-class discussion.-->
-        <!-- Your assigned role determines what you should include in the slides.-->
-        If you do so, I would recommend less than 7-10 slides to make sure stay within our time budget.
-    </p>
-    <p><b>What slides?</b> To minimize time spent context switching or fighting with screen sharing/projector dongles,
-        we will have a shared pool of slides (hosted on Google presentations, will be shared a week before).
-        Each role group are encouraged to title their slides with "<span
-                style="font-family: 'Trebuchet MS', sans-serif;">[role emoji]: [student name]</span>" (as in "<span
-                style="font-family: 'Trebuchet MS', sans-serif;">🏺: Jane,John</span>")
-        so that the slides are quickly identified during the session.
-        If you choose to make slides, you're <b>not</b> expected to
-        prepare a full-blown presentation -- they're encouraged for visual aid and facilitating the presentation.
-    </p>
-    <h3>Non-Presenters</h3>
-    If you aren't in the presenting group during a given class period:
-    <p><b>Before the class</b>
-        Please provide a short answer to a prompt posed by the instructor a few days before the class.
-    </p>
-    <p><b>The beginning of each class</b>
-        Come up with one question about the paper (either something you're confused about or something you'd like to hear discussed more).
-    </p>
-    <p><b>During the class</b>
-        While only a subset of the class will participate in presenting a paper, the rest of the class is expected to
-        come to class ready to participate in the discussions.
-    </p>
+
 </div>
 
 <!--[TODO: how to change the roles? consult with the instructor]-->
@@ -280,660 +237,448 @@
         <colgroup>
             <col style="width:15%">
             <col style="width:23%">
-            <col style="width:75%">
-
+            <col style="width:25%">
+            <col style="width:45%">
         </colgroup>
         <thead>
         <tr class="active">
             <th>Date</th>
             <th>Topic</th>
             <th>Course Materials</th>
+            <th>Additional reading</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>#1 - Tue Aug 30</td>
+            <td>#1 - Tue Jan 24</td>
             <td>Course overview, plan and expectations</td>
             <td>
-                Slides: <a href="files/601-771-sec1.pptx">PPTX</a>, <a href="files/601-771-sec1.pdf">PDF</a>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/tbd">PDF</a>
             </td>
         </tr>
         <tr>
-            <td>#2 - Thu Sept 1</td>
-            <td>Preliminaries: Past, Architectures, Pre-training, Capabilities</td>
+            <td>#2 - Thu Jan 26</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec2.pptx">PPTX</a>, <a href="files/601-771-sec2.pdf">PDF</a>
-                <br>
-                <hr>
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a></li>
-                    <li><a href="http://nlp.seas.harvard.edu/annotated-transformer/">The Annotated Transformer  </a></li>
-                    <li><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#3 - Tue Sept 6</td>
-            <td>Pretraining Language Models</td>
+            <td>#3 - Tue Jan 31</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec3.pptx">PPTX</a>, <a href="files/601-771-sec3.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ERXPZD4FlJdGkoQnwvpnOYcBo-08aKTSopPbepb8QcVkLg?e=iOX19M">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://www.semanticscholar.org/paper/BERT%3A-Pre-training-of-Deep-Bidirectional-for-Devlin-Chang/df2b0e26d0599ce3e70df8a9da02e51594e0e992">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>
-                <hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://jalammar.github.io/illustrated-bert/">The Illustrated BERT, ELMo, and co</a></li>
-                    <li><a href="https://arxiv.org/abs/1907.11692">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a></li>
-                    <li><a href="https://www.jmlr.org/papers/volume21/20-074/20-074.pdf">Exploring the limits of transfer learning with a unified text-to-text transformer</a></li>
-                    <li><a href="https://arxiv.org/abs/1910.13461">BART: Denoising Sequence-to-Sequence Pre-training </a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#4 - Thu Sept 8</td>
-            <td>Pretraining Language Models</td>
+            <td>#4 - Thu Feb 2</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec4.pptx">PPTX</a>, <a href="files/601-771-sec4.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EQ-FrGrZ7VVPv3ryeNYtd74BEeOHseCmQbcIFEe3Eio5ng?e=QnNuiK">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a><hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">Language Models are Unsupervised Multitask Learners</a></li>
-                    <li><a href="https://arxiv.org/abs/2205.01068">OPT: Open Pre-trained Transformer Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.06745">GPT-NeoX-20B: An Open-Source Autoregressive Language Model</a></li>
-                    <li><a href="https://jalammar.github.io/illustrated-gpt2/">The Illustrated GPT-2</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#5 - Tue Sept 13</td>
-            <td>Architectures</td>
+            <td>#5 - Tue Feb 7</td>
+            <td>tbd</td>
             <td>
-<!--            <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcZPOF912c5LiE4LLJ6hXGUBCuEXaGI7tBDX5M7iirnwdw?e=XyaRRb">Slides</a>-->
-                Slides: <a href="files/601-771-sec5.pptx">PPTX</a>, <a href="files/601-771-sec5.pdf">PDF</a>
-                <br>
-                Main Reading:
-                <a href="https://proceedings.mlr.press/v162/wang22u/wang22u.pdf">What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? </a>
-
-                <hr>
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2205.05131">Unifying Language Learning Paradigms</a></li>
-                    <li><a href="https://arxiv.org/abs/2102.11972">Do transformer modifications transfer across implementations and applications? </a></li>
-                    <li><a href="https://arxiv.org/abs/2203.06211">Staged Training for Transformer Language Models </a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#6 - Thu Sept 15</td>
-            <td>In-context Learning</td>
+            <td>#6 - Thu Feb 9</td>
+            <td>tbd</td>
             <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EVvlEsHW7T5AryRSN7AxHZEBllDGW9JVDHpZfWdGr6-mWQ?e=zaF9PF">Slides</a><br>-->
-                Slides: <a href="files/601-771-sec6.pptx">PPTX</a>, <a href="files/601-771-sec6.pdf">PDF</a>
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2104.08786">Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity</a>
-
-                <hr>
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2109.07830">Reframing Instructional Prompts to GPTk's Language</a></li>
-<!--                    <li><a href="https://arxiv.org/abs/2202.07206">Impact of Pretraining Term Frequencies on Few-Shot Reasoning</a></li>-->
-                    <li><a href="https://arxiv.org/abs/2204.13509">On the Effect of Pretraining Corpora on In-context Learning by a Large-scale Language Model</a></li>
-                    <li><a href="https://arxiv.org/abs/2208.01066">What Can Transformers Learn In-Context? A Case Study of Simple Function Classes</a></li>
-                    <li><a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">In-context Learning and Induction Heads</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#7 - Tue Sept 20</td>
-            <td>Limits of In-context Learning</td>
+            <td>#7 - Tue Feb 14</td>
+            <td>tbd</td>
             <td>
-                <!--  <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EaPhOPc329tFk5OT60gHY-kBQousdKzmRVsAYFmzCIKilQ?e=SwznMb">Slides</a><br>-->
-                Slides: <a href="files/601-771-sec7.pptx">PPTX</a>, <a href="files/601-771-sec7.pdf">PDF</a><br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2202.12837">Rethinking the Role of Demonstrations: What Makes In-Context Learning Work? </a>
-                <hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2205.05055">Data Distributional Properties Drive Emergent In-Context Learning in Transformers</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.04615">Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models</a></li>
-                    <li><a href="https://ai.stanford.edu/blog/understanding-incontext/">How does in-context learning work? A framework for understanding the differences from traditional supervised learning</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#8 - Thu Sept 22</td>
-            <td>Limits of In-context Learning</td>
+            <td>#8 - Thu Feb 16</td>
+            <td>tbd</td>
             <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYt8JtA0SbpIhKHWeRBCTxABXigXjDvdgAKzn2xtfp83Eg?e=GSF9gq">Slides</a>-->
-                Slides: <a href="files/601-771-sec8.pptx">PPTX</a>, <a href="files/601-771-sec8.pdf">PDF</a>
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2202.07206">Impact of Pretraining Term Frequencies on Few-Shot Reasoning</a>
-                <hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2109.01247">Do Prompt-Based Models Really Understand the Meaning of Their Prompts? </a></li>
-                    <li><a href="https://arxiv.org/abs/1411.1792">How transferable are features in deep neural  networks?</a></li>
-                    <li><a href="https://arxiv.org/abs/2109.07020">Frequency Effects on Syntactic Rule Learning in Transformers</a></li>
-<!--                    <li><a href="https://arxiv.org/abs/2204.05454">Are Multimodal Transformers Robust to Missing Modality?</a></li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2202.12299">Capturing Failures of Large Language Models via Human Cognitive Biases</a></li>-->
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#9 - Tue Sept 27</td>
-            <td>Social Harms: Bias</td>
+            <td>#9 - Tue Feb 21</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec9.pptx">PPTX</a>, <a href="files/601-771-sec9.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EXZSwqPcHGhPu393wLLWdhcB6rkVsoJ6hoXeriRY56xt7Q?e=Weklb0">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://papers.nips.cc/paper/2021/file/1531beb762df4029513ebf9295e0d34f-Paper.pdf">Bias Out-of-the-Box: An Empirical Analysis of  Intersectional Occupational Biases in Popular  Generative Language Models</a>
-                <hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2010.02428">UnQovering Stereotypical Biases via Underspecified Questions.</a></li>
-                    <li><a href="https://arxiv.org/abs/2209.07065">CommunityLM: Probing Partisan Worldviews from Language Models.</a></li>
-                    <li><a href="https://dl.acm.org/doi/10.1145/3531146.3533138">Robots Enact Malignant Stereotypes.</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.09860">Fewer Errors, but More Stereotypes? The Effect of Model Size on Gender Bias.</a></li>
-                    <li><a href="https://arxiv.org/abs/2103.00453">Self-Diagnosis and Self-Debiasing: A Proposal for Reducing Corpus-Based Bias in NLP</a> </li>
-                    <li><a href="https://storage.googleapis.com/deepmind-media/Red%20Teaming/Red%20Teaming.pdf">Red Teaming Language Models with Language Models</a></li>
-<!--                    <li><a href="https://dl.acm.org/doi/pdf/10.1145/3442188.3445922">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</a></li>-->
-<!--                    <li><a href="https://arxiv.org/abs/2109.07958">TruthfulQA: Measuring How Models Mimic Human Falsehoods</a></li>-->
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#10 - Thu Sept 29</td>
-            <td>Social Harms: Toxicity</td>
+            <td>#10 - Thu Feb 23</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec10.pptx">PPTX</a>, <a href="files/601-771-sec10.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ETp159EMfuFGuGcvTyiQBSoBEO6iiAFFhzRSuwWkUOypLw?e=oBwtuW">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2009.11462">RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://dl.acm.org/doi/pdf/10.1145/3442188.3445922">On the Dangers of Stochastic Parrots:  Can Language Models Be Too Big?</a></li>
-                    <li><a href="https://arxiv.org/abs/2109.07958">TruthfulQA: Measuring How Models Mimic Human Falsehoods</a></li>
-                    <li><a href="https://arxiv.org/abs/2104.08758">Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus</a></li>
-                </ol>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
             </td>
-
-        </tr>
-        <tr class="sechighlight2 centered">
-            <td>Fri Sept 30 </td>
-            <td colspan="2">Project proposal submission deadline [<a href="https://livejohnshopkins-my.sharepoint.com/:w:/g/personal/dkhasha1_jh_edu/ET_uhHXljadPhFGIPqujgnYBzMYWLRAHZfbGIwe9wp-Mrg?e=GcCnDz"> proposal document </a>] </td>
-        </tr>
-        <tr>
-            <td>#11 - Tue Oct 4</td>
-            <td>Memorization and Privacy</td>
             <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EboDExZi28FFsQziQM_AiewBdpeGnDHRLIvTtVPpd43Lgw?e=f1AUck">Slides</a>-->
-                Slides: <a href="files/601-771-sec11.pptx">PPTX</a>, <a href="files/601-771-sec11.pdf">PDF</a>
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2202.07646">Quantifying Memorization  Across Neural Language Models</a>
-                <hr>
-
-                Additional Reading(s):
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from Large Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2112.12938">Counterfactual Memorization in Neural Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2203.08242">Data Contamination: From Memorization to Exploitation</a></li>
-                    <li><a href="https://arxiv.org/abs/2205.10770">Memorization Without Overfitting: Analyzing the  Training Dynamics of Large Language Models</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
         <tr>
-            <td>#12 - Thu Oct 6</td>
-            <td>Memorization and Privacy</td>
+            <td>#11 - Tue Feb 28</td>
+            <td>tbd</td>
             <td>
-                Slides: <a href="files/601-771-sec12.pptx">PPTX</a>, <a href="files/601-771-sec12.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcDfPVzOHUpOhCXri_cZozUBkKd63YpVriRGMqpTpLD1qg?e=NFc0T7">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2202.06539">Deduplicating Training Data Mitigates Privacy Risks in Language Models</a>
-                <hr>
-
-                Additional Reading(s):
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2110.06500">Differentially Private Fine-tuning of Language Models</a></li>
-                    <li><a href="https://pair.withgoogle.com/explorables/private-and-fair/">Can a Model Be Differentially Private and Fair?</a></li>
-                    <li><a href="https://arxiv.org/abs/2110.05679">Large Language Models Can Be Strong Differentially Private Learners</a></li>
-                    <li><a href="https://arxiv.org/pdf/2202.05520.pdf">What Does it Mean for a Language Model to Preserve Privacy?</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
         </tr>
-        <tr class="sechighlight3">
-            <td>#13 - Tue Oct 11</td>
-            <td>External Speaker: <br><a href="https://anjalief.github.io/">Anjalie Field (Stanford)</a></td>
+        <tr>
+            <td>#12 - Thu Mar 2</td>
+            <td>tbd</td>
             <td>
-                Social Applications of Pre-trained Language Models [<a href="https://www.youtube.com/watch?v=rpGP1WVRFT4">video</a> - <a href="files/JHU-GuestLecture-LLM+SocialApplications.pdf">slides</a>]
-<!--                <a href="http://tbd">Slides</a><br>-->
-<!--                Main Reading:-->
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#13 - Tue Mar 7</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#14 - Thu Mar 9</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#15 - Tue Mar 14</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#16 - Thu Mar 16</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr class="sechighlight4 centered">
+            <td>#17 - Tue Mar 21</td>
+            <td>No Class - Spring Break</td>
+            <td>
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
+            </td>
+            <td>
 <!--                <ol>-->
-<!--                    <li><a href=""></a></li>-->
-<!--                </ol>-->
-
-<!--                Additional Reading(s):-->
-<!--                <ol>-->
-<!--                    <li><a href=""></a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
 <!--                </ol>-->
             </td>
         </tr>
-        <tr class="sechighlight2 centered">
-            <td>#14 - Thu Oct 13</td>
-            <td>Project Proposal Presentation</td>
+        <tr class="sechighlight4 centered">
+            <td>#18 - Thu Mar 23</td>
+            <td>No Class - Spring Break</td>
             <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/Eelx3N0_SM5Mgx0n7RgIovgBybgQvMqeaqNw0StON7OoEg?e=kAUzzc">Slides</a><br>
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
+            </td>
+            <td>
+<!--                <ol>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                </ol>-->
             </td>
         </tr>
-
         <tr>
-            <td>#15 - Tue Oct 18</td>
-            <td>Pretraining Coding Models</td>
-            <td>Slides: <a href="files/601-771-sec15.pptx">PPTX</a>, <a href="files/601-771-sec15.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EUNMOP8BQvRNrbwi-_6VyTcBpQIU0dwJgddMtcYaeYPWvg?e=pwLNAY">Slides</a>-->
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2107.03374">Evaluating Large Language Models Trained on Code</a>
-                <hr>
-                Additional Reading(s):
+            <td>#19 - Tue Mar 28</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
                 <ol>
-                    <li><a href="https://arxiv.org/abs/2203.07814">Competition-Level Code Generation with AlphaCode</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.05999">InCoder: A Generative Model for Code Infilling and Synthesis</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.14858">Solving Quantitative Reasoning Problems with Language Models</a></li>
-                    <li><a href="https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/">Copilot’s impact on developer productivity</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.15000">Grounded Copilot: How Programmers Interact with Code-Generating Models</a></li>
-                    <li><a href="https://dl.acm.org/doi/abs/10.1145/3491101.3519665">Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models</a></li>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
                 </ol>
             </td>
-
+        </tr>
+        <tr>
+            <td>#20 - Thu Mar 30</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#21 - Tue Apr 4</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#22 - Thu Apr 6</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#23 - Tue Apr 11</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#24 - Thu Apr 13</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#25 - Tue Apr 18</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#26 - Thu Apr 20</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#27 - Tue Apr 25</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>#28 - Thu Apr 27</td>
+            <td>tbd</td>
+            <td>
+                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>
+            </td>
+            <td>
+                <ol>
+                    <li><a href="">tbd</a></li>
+                    <li><a href="">tbd</a></li>
+                </ol>
+            </td>
         </tr>
         <tr class="sechighlight4 centered">
-            <td>#16 - Thu Oct 20</td>
-            <td>No Class - Fall Break</td>
+            <td>#29 - Tue May 2</td>
+            <td>No Class - Reading Days</td>
             <td>
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
+            </td>
+            <td>
+<!--                <ol>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                </ol>-->
             </td>
         </tr>
-        <tr>
-            <td>#17 - Tue Oct 25</td>
-            <td>Pretraining Vision-Language Models</td>
-            <td>
-                Slides: <a href="files/601-771-sec17.pptx">PPTX</a>, <a href="files/601-771-sec17.pdf">PDF</a>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcbN5v9izmBDvTreX6yJ9dgBXWxbOhwUmOpsRdCNUKn5GA">Slides</a>-->
-            <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2103.00020">Learning Transferable Visual Models From Natural Language Supervision</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2010.11929">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
-                    <li><a href="https://arxiv.org/abs/2102.05918">Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision</a></li>
-                    <li><a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a></li>
-                    <li><a href="https://arxiv.org/abs/2106.02636">MERLOT: Multimodal Neural Script Knowledge Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2111.07991">LiT: Zero-Shot Transfer with Locked-image text Tuning</a></li>
-                    <li><a href="https://arxiv.org/abs/2010.11929">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
-                    <li><a href="https://arxiv.org/abs/2201.07520">CM3: A Causal Masked Multimodal Model of the Internet</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>#18 - Thu Oct 27</td>
-            <td>Pretraining Vision-Language Models</td>
-            <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EfBDjtEWK0FKgoM2mtkgVqMBqmn96qvndnZoRyhoF6aA_Q?e=Hryu8y">Slides</a>-->
-                Slides: <a href="files/601-771-sec18.pptx">PPTX</a>, <a href="files/601-771-sec18.pdf">PDF</a>
-                <br>
-                Main Reading:
-<!--                <a href="https://arxiv.org/abs/2102.12092">Zero-Shot Text-to-Image Generation</a>-->
-                <a href="https://arxiv.org/abs/2204.06125">Hierarchical Text-Conditional Image Generation with CLIP Latents</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://imagen.research.google/paper.pdf">Photorealistic Text-to-Image Diffusion Models  with Deep Language Understanding</a></li>
-                    <li><a href="https://arxiv.org/abs/2208.10442">Image as a Foreign Language: BEiT Pretraining for All Vision and Vision-Language Tasks</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.00169">Discovering the Hidden Vocabulary of DALLE-2</a></li>
-                    <li><a href="https://arxiv.org/abs/2112.10752">High-Resolution Image Synthesis with Latent Diffusion Models</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr class="sechighlight3">
-            <td>#19 - Tue Nov 1</td>
-            <td>
-                External Speaker:
-                <a href="https://jasonwei20.github.io/">Jason Wei (Google)</a>
-            </td>
-            <td>
-                Emergence and reasoning in large language models [<a href="https://www.youtube.com/watch?v=0Z1ZwY2K2-M">video</a> - <a href="files/jasonwei-CoT-emergence-talk-JHU.pdf">slides</a>]
-            </td>
-        </tr>
-        <tr>
-            <td>#20 - Thu Nov 3</td>
-            <td>Pretraining Speech/Audio Models</td>
-            <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/Edt9qgpN3hNOpwWrECBkXDYB2dtW8fZqUxZFJVZzQlp13g?e=EcqBDI">Slides</a>-->
-                Slides: <a href="files/601-771-sec19.pptx">PPTX</a>, <a href="files/601-771-sec19.pdf">PDF</a>
-                <br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2006.11477">wav2vec 2.0: A Framework for Self-Supervised  Learning of Speech Representations</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2005.00341">Jukebox: A Generative Model for Music</a></li>
-                    <li><a href="https://arxiv.org/abs/2202.01374">mSLAM: Massively multilingual joint pre-training for speech and text</a></li>
-                    <li><a href="https://arxiv.org/abs/2111.12124v3">Towards Learning Universal Audio Representations</a></li>
-                    <li><a href="https://arxiv.org/abs/2209.03143">AudioLM: a Language Modeling Approach to Audio Generation</a></li>
-                    <li><a href="https://cdn.openai.com/papers/whisper.pdf">Robust Speech Recognition via Large-Scale Weak Supervision</a></li>
-                    <li><a href="https://arxiv.org/abs/1804.00015">ESPnet: End-to-End Speech Processing Toolkit</a></li>
-                    <li><a href="https://arxiv.org/abs/2105.11084">Unsupervised Speech Recognition</a></li>
-                    <li><a href="https://arxiv.org/abs/2207.06405">Masked Autoencoders that Listen</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.02492">Towards End-to-end Unsupervised Speech Recognition</a></li>
-                    <li><a href="https://arxiv.org/abs/2110.09784">SSAST: Self-Supervised Audio Spectrogram Transformer</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr>
-            <td>#21 - Tue Nov 8</td>
-            <td>Retrieval from Memory</td>
-            <td>
-<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EZIISVIIBHdHrQk8j5g1VYUBROvXbibO4YPYkCsGWRHPYA?e=s10eeM">Slides</a>-->
-                Slides: <a href="files/601-771-sec20.pptx">PPTX</a>, <a href="files/601-771-sec20.pdf">PDF</a>
-                <br>
-                Main Reading: <a href="https://proceedings.neurips.cc/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf">Retrieval-Augmented Generation for  Knowledge-Intensive NLP Tasks</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2002.08909">REALM: Retrieval-Augmented Language Model Pre-Training</a></li>
-                    <li><a href="https://arxiv.org/abs/2112.09118">Unsupervised Dense Information Retrieval with Contrastive Learning</a></li>
-                    <li><a href="https://arxiv.org/abs/2112.04426v3">Improving language models by retrieving  from trillions of tokens</a></li>
-                    <li><a href="https://arxiv.org/abs/2208.03299">Few-shot Learning with Retrieval Augmented Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2201.09680">Relational Memory Augmented Language Models</a></li>
-                    <li><a href="https://arxiv.org/abs/2210.16773">An Efficient Memory-Augmented Transformer for Knowledge-Intensive NLP Tasks</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr class="sechighlight3">
-            <td>#22 - Thu Nov 10 </td>
-            <td>
-                External Speaker:
-                <a href="https://sites.krieger.jhu.edu/jared-kaplan/">Jared Kaplan</a>
-            </td>
-            <td>
-<!--                <a href="http://tbd">Slides</a><br>-->
-            </td>
-        </tr>
-
-        <tr class="sechighlight2 centered">
-            <td>#23 - Tue Nov 15</td>
-            <td>Midway Project Presentation</td>
-            <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcLPaq9VFIpIj_LDA2gp0G4Bn-fclkt29UO7HMvVw_qgsQ?e=qDnfiM">Slides</a><br>
-            </td>
-        </tr>
-        <tr>
-            <td>#24 - Thu Nov 17</td>
-            <td>Calibration</td>
-            <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EaUK1GPRDk1Bpq4LUSO8awQB6I8YAMq8fdaXLQa0dYyYaA?e=MHsp0z">Slides</a><br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/2207.05221">Language Models (Mostly) Know What They Know</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00407/107277/How-Can-We-Know-When-Language-Models-Know-On-the">How Can We Know When Language Models Know? On the Calibration of Language Models for Question Answering</a></li>
-                    <li><a href="https://arxiv.org/abs/2203.11364">An Information-theoretic Approach to Prompt Engineering Without
-Ground Truth Labels</a></li>
-                </ol>
-            </td>
-
-        </tr>
-
         <tr class="sechighlight4 centered">
-            <td>#25 - Tue Nov 22</td>
-            <td>No Class - Fall Recess</td>
+            <td>#30 - Thu May 4</td>
+            <td>No Class - Reading Days</td>
             <td>
-            </td>
-        </tr>
-
-        <tr class="sechighlight4 centered">
-            <td>#26 - Thu Nov 24</td>
-            <td>No Class - Fall Recess</td>
-            <td>
-            </td>
-        </tr>
-
-        <tr>
-            <td>#27 - Tue Nov 29</td>
-
-            <td>Environmental Impact</td>
-            <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EWqahb4AIPlJtiM4aDyIaboBYt8SP0IPqMkAQnqIQpILiw?e=8qYczZ">Slides</a><br>
-                Main Reading:
-                <a href="https://arxiv.org/abs/1906.02243">Energy and Policy Considerations for Deep Learning in NLP</a>
-                <hr>
-
-                Additional Reading(s):
-                <ol>
-                    <li><a href="https://crfm.stanford.edu/assets/report.pdf#environment">Foundation Models report: Environment (section 5.3)</a></li>
-                    <li><a href="https://dl.acm.org/doi/pdf/10.1145/3381831">Green AI</a></li>
-                </ol>
-            </td>
-        </tr>
-        <tr >
-            <td>#28 - Thu Dec 1</td>
-
-                        <td>Last class: open-ended reflections on power, limitations, and future of self-supervised statistical models</td>
-            <td><a href="http://tbd">Slides</a><br><hr>
-
-            Additional Reading(s):
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2208.12852">What Do NLP Researchers Believe? Results of the NLP Community Metasurvey</a></li>
-                    <li><a href="https://aclanthology.org/2020.acl-main.463/">Climbing towards NLU: On meaning, form, and understanding in the age of data</a></li>
-                    <li><a href="https://chrisgpotts.medium.com/is-it-possible-for-language-models-to-achieve-language-understanding-81df45082ee2">Is it possible for language models to achieve language understanding?</a></li>
-                    <li><a href="https://www.noemamag.com/ai-and-the-limits-of-language/">AI And The Limits Of Language</a></li>
-                    <li><a href="https://www.cs.rochester.edu/~schubert/191-291/selected-articles/pinker-could-a-computer-ever-be-conscious97.pdf">Could A Computer Ever Be Conscious</a></li>
-                    <li><a href="https://arxiv.org/abs/2210.12889">DALLE2 fails to reliably capture common syntactic processes </a></li>
-                    <li><a href="https://irmckenzie.co.uk/round1">Inverse Scaling</a></li>
-                    <li><a href="https://arxiv.org/abs/2211.00768">Why is Winoground Hard? Investigating Failures in Visuolinguistic Compositionality</a></li>
-                </ol>
-            </td>
-
-
-        </tr>
-        <tr class="sechighlight3">
-            <td>#29 - Tue Dec 6 </td>
-            <td>
-                External Speaker:
-                <a href="https://colinraffel.com/">Colin Raffel</a>
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
             </td>
             <td>
-<!--                <a href="http://tbd">Slides</a><br>-->
+<!--                <ol>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                </ol>-->
             </td>
         </tr>
-        <tr >
-            <td>#30 - Thu Dec 8 </td>
-
-            <td>Final project presentation (I) </td>
-            <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/Eb7jCHgIa2hOmUiehX1_DT8BGBMDPI9soYPGypvsppYLwQ?e=1ha9Wb">Slides</a><br>
-            </td>
-
-        </tr>
-        <tr class="sechighlight2 centered">
-            <td> Thu Dec 22 <br> 9 AM - 12 PM<a href="https://studentaffairs.jhu.edu/registrar/wp-content/uploads/sites/23/2022/08/Fall-2022-Final-Exam-Schedule.pdf"> <sup><b>*</b></sup></a> </td>
-            <td>Final project presentation (II) </td>
-            <td>
-                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/Eb7jCHgIa2hOmUiehX1_DT8BGBMDPI9soYPGypvsppYLwQ?e=1ha9Wb">Slides</a><br>
-            </td>
-        </tr>
-        <tr class="sechighlight2 centered">
-            <td> Thu Dec 22, 9 AM  </td>
-            <td colspan="2">Final report submission deadline </td>
-        </tr>
-
 <!--        <tr>-->
-<!--            <td>#32 - Thu Dec 15</td>-->
-<!--            <td>Introduction to Transformers</td>-->
+<!--            <td>#31 - Tue May 9</td>-->
+<!--            <td>tbd</td>-->
 <!--            <td>-->
-<!--                <a href="http://tbd">Slides</a><br>-->
-<!--                Main Reading:-->
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
+<!--            </td>-->
+<!--            <td>-->
 <!--                <ol>-->
-<!--                    <li><a href=""></a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
 <!--                </ol>-->
-
-<!--                Additional Reading(s):-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>#32 - Thu May 11</td>-->
+<!--            <td>tbd</td>-->
+<!--            <td>-->
+<!--                Slides: <a href="files/?">PPTX</a>, <a href="files/?">PDF</a>-->
+<!--            </td>-->
+<!--            <td>-->
 <!--                <ol>-->
-<!--                    <li><a href=""></a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
+<!--                    <li><a href="">tbd</a></li>-->
 <!--                </ol>-->
 <!--            </td>-->
 <!--        </tr>-->
 
+        <tr class="sechighlight2 centered">
+            <td> TBD
+<!--                <br> 9 AM - 12 PM<a href="https://studentaffairs.jhu.edu/registrar/wp-content/uploads/sites/23/2022/08/Fall-2022-Final-Exam-Schedule.pdf"> <sup><b>*</b></sup></a> -->
+            </td>
+            <td>Final project presentation </td>
+            <td>
+<!--                <a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/Eb7jCHgIa2hOmUiehX1_DT8BGBMDPI9soYPGypvsppYLwQ?e=1ha9Wb">Slides</a><br>-->
+            </td>
+            <td>   </td>
+        </tr>
+
+        <tr class="sechighlight2 centered">
+            <td> TBD  </td>
+            <td colspan="2">Final report submission deadline </td>
+            <td>   </td>
+        </tr>
         </tbody>
     </table>
 </div>
-
-<div class="container">
-    <h2>Additional topics</h2>
-    <p>Here are the topics we wanted to cover but didn't have time for:</p>
-    <ul>
-        <li>Scaling:
-            <ol>
-                <li> <a href="https://arxiv.org/abs/2001.08361v1">Scaling Laws for Neural Language Models</a></li>
-                <li><a href="https://arxiv.org/abs/2010.14701">Scaling Laws for Autoregressive Generative Modeling</a></li>
-                <li><a href="https://arxiv.org/abs/2006.10029">Big Self-Supervised Models are Strong Semi-Supervised Learners</a></li>
-                <li><a href="https://arxiv.org/abs/2203.15556">Training Compute-Optimal Large Language Models</a></li>
-                <li><a href="https://arxiv.org/abs/2112.11446">Scaling Language Models: Methods, Analysis & Insights from Training Gopher</a></li>
-                <li><a href="https://openreview.net/forum?id=f2OYVDyfIB">Scale Efficiently: Insights from Pretraining and Finetuning Transformers</a></li>
-            </ol>
-        </li>
-    </ul>
-    <ul>
-        <li>Data:
-            <ol>
-                <li><a href="https://arxiv.org/abs/2104.08758">Documenting Large Webtext Corpora: A Case Study on the Colossal Clean Crawled Corpus</a></li>
-                <li><a href="https://arxiv.org/abs/2101.00027">The Pile: An 800GB Dataset of Diverse Text for Language Modeling</a></li>
-                <li><a href="https://arxiv.org/abs/2204.13509">On the Effect of Pretraining Corpora on  In-context Learning by a Large-scale Language Model</a></li>
-                <li><a href="https://arxiv.org/abs/2107.06499">Deduplicating Training Data Makes Language Models Better</a></li>
-            </ol>
-        </li>
-    </ul>
-    <ul>
-        <li>Social Harms: Misinformation:
-            <ol>
-                <li><a href="https://arxiv.org/abs/1905.12616">Defending against neural fake news</a>/li>
-                <li><a href="https://arxiv.org/abs/1908.09203">Release Strategies and the  Social Impacts of Language Models</a></li>
-                <li><a href="https://arxiv.org/abs/2204.05533">How does fake news use a thumbnail? CLIP-based Multimodal Detection on the Unrepresentative News Image</a></li>
-                <li><a href="https://arxiv.org/abs/1911.00650">Automatic Detection of Generated Text is  Easiest when Humans are Fooled</a></li>
-                <li><a href="https://aclanthology.org/D17-1317/">Truth of Varying Shades: Analyzing Language in Fake News and Political Fact-Checking</a></li>
-            </ol>
-        </li>
-    </ul>
-    <ul>
-        <li>Rationalization/Explanations:
-        <ol>
-            <li><a href="https://arxiv.org/abs/2205.03401">The Unreliability of Explanations in Few-Shot In-Context Learning</a></li>
-            <li><a href="https://arxiv.org/abs/2204.11790">Can Rationalization Improve Robustness?</a></li>
-            <li><a href="https://arxiv.org/abs/2204.02329">Can language models learn from explanations in context?</a></li>
-        </ol>
-        </li>
-    </ul>
-    <ul>
-        <li>Continuous Prompts:
-            <ol>
-                <li><a href="https://arxiv.org/abs/2104.08691">The Power of Scale for Parameter-Efficient Prompt Tuning</a></li>
-                <li><a href="https://arxiv.org/abs/2101.00190">Prefix-Tuning: Optimizing Continuous Prompts for Generation</a></li>
-                <li><a href="https://arxiv.org/abs/2110.07904">SPoT: Better Frozen Model Adaptation through Soft Prompt Transfer</a></li>
-                <li><a href="https://arxiv.org/abs/2112.08348">Prompt Waywardness: The Curious Case of Discretized Interpretation of Continuous Prompts</a></li>
-            </ol>
-        </li>
-    </ul>
-    <ul>
-        <li>
-                Compositionality:
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2204.03162">Winoground: Probing Vision and Language Models  for Visio-Linguistic Compositionality</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.00598">Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language</a></li>
-                    <li><a href="https://arxiv.org/abs/2109.04912">ReasonBERT: Pre-trained to Reason with Distant Supervision</a></li>
-                    <li><a href="https://arxiv.org/abs/2201.11473">Reasoning Like Program Executors</a></li>
-                    <li><a href="https://arxiv.org/abs/2203.15827">LinkBERT: Pretraining Language Models with Document Links </a></li>
-                </ol>
-            </li>
-    </ul>
-
-    <ul>
-        <li>
-                Generalism:
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2205.06175">A Generalist Agent</a></li>
-                    <li><a href="https://arxiv.org/abs/2005.00700">UnifiedQA: Crossing Format Boundaries With a Single QA System </a></li>
-                    <li><a href="https://arxiv.org/abs/2107.14795">Perceiver IO: A General Architecture for Structured Inputs & Outputs</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.07705">Benchmarking Generalization via In-Context Instructions on 1,600+ Language Tasks</a></li>
-                    <li><a href="https://arxiv.org/abs/2110.08207">Multitask Prompted Training Enables Zero-Shot Task Generalization</a></li>
-                    <li><a href="https://arxiv.org/abs/2109.01652">Finetuned Language Models Are Zero-Shot Learners</a></li>
-                    <li><a href="https://openreview.net/forum?id=8kbp23tSGYv">BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning</a></li>
-                </ol>
-            </li>
-    </ul>
-
-    <ul>
-        <li>
-                Acting in Grounded Environments:
-                <ol>
-                    <li><a href="https://arxiv.org/abs/2204.01691">Do as I can, not as I say: grounded language in robotic affordances</a></li>
-                    <li><a href="https://arxiv.org/abs/2201.07207">Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</a></li>
-                    <li><a href="https://arxiv.org/abs/2106.00188">PIGLeT: Language Grounding Through Neuro-Symbolic Interaction in a 3D World</a></li>
-                    <li><a href="https://arxiv.org/abs/2004.10151">Experience Grounds Language</a></li>
-                </ol>
-            </li>
-    </ul>
-
-    <ul>
-        <li>
-            Evolving Memory:
-                <ol>
-                    <li><a href="https://openreview.net/pdf?id=TrjbxzRcnf-">Memorizing Transformers</a></li>
-                    <li><a href="https://arxiv.org/abs/2110.11309">Fast Model Editing at Scale</a></li>
-                    <li><a href="https://arxiv.org/abs/2206.06520">SERAC: Memory-based Model Editing at Scale</a></li>
-                    <li><a href="https://arxiv.org/abs/2204.13074">Towards Teachable Reasoning Systems</a></li>
-                </ol>
-            </li>
-    </ul>
-    <ul>
-        <li>
-            Diagnosis:
-            <ol>
-                <li><a href="https://arxiv.org/abs/2109.01247">Do Prompt-Based Models Really Understand the Meaning of Their Prompts? </a></li>
-                <li><a href="https://arxiv.org/abs/1411.1792">How transferable are features in deep neural  networks?</a></li>
-                <li><a href="https://arxiv.org/abs/2109.07020">Frequency Effects on Syntactic Rule Learning in Transformers</a></li>
-                <li><a href="https://arxiv.org/abs/2204.05454">Are Multimodal Transformers Robust to Missing Modality?</a></li>
-                <li><a href="https://arxiv.org/abs/2202.12299">Capturing Failures of Large Language Models via Human Cognitive Biases</a></li>
-            </ol>
-        </li>
-    </ul>
-
-</div>
-
 
 <div class="container sechighlight" id="project">
     <h2>Project</h2>
@@ -946,7 +691,8 @@ Ground Truth Labels</a></li>
     </p>
     <ul>
 
-        <li><b>Group work:</b> Students are encouraged to work in groups on the final project (team sizes limited to 2 or
+        <li><b>Group work:</b> Students are encouraged to work in groups on the final project (team sizes limited to 2
+            or
             3 people).
         </li>
         <li><b>Project proposals:</b> All groups will be required to submit a project proposal due on Friday Sept 30.
@@ -955,18 +701,20 @@ Ground Truth Labels</a></li>
             concrete idea. There will be lightning presentations of the finalized proposals on Thursday Oct 13.
         </li>
         <li><b>Midway progress presentation:</b> Groups will present their halfway progress during a mid-way project
-            presentation on Tuesday Nov 15. This is expected to be a short presentation discussing the progress made for each project and
+            presentation on Tuesday Nov 15. This is expected to be a short presentation discussing the progress made for
+            each project and
             any remaining hurdles.
         </li>
         <li><b>Final presentation:</b> The final project presentation will be during the final exam period. All students
             in each group are required to present some material during the final presentation.
         </li>
         <li><b>Final Report:</b> Students should write code and carry out additional experiments and then write up the
-            results in a standard conference paper format (<a href="https://www.overleaf.com/latex/templates/neurips-2022/kxymzbjpwsqx">template</a>).
-            The length of the final report should be  5 to 8 pages. Note that longer reports are not necessarily better.
+            results in a standard conference paper format (<a
+                    href="https://www.overleaf.com/latex/templates/neurips-2022/kxymzbjpwsqx">template</a>).
+            The length of the final report should be 5 to 8 pages. Note that longer reports are not necessarily better.
             Students in groups are required to include a “contributions” section concretely lists each
             author’s contributions (see Section 8 of this paper, for example).
-<!--            The final reports are due TBD.-->
+            <!--            The final reports are due TBD.-->
         </li>
     </ul>
 </div>
@@ -1008,15 +756,20 @@ Ground Truth Labels</a></li>
                 <li><a href="https://google-research.github.io/seanet/audiolm/examples/">Examples from AudioLM</a></li>
                 <li><a href="https://github.com/CompVis/stable-diffusion">Stable Diffusion model weights </a></li>
 
-                <li><a href="https://instructions.apps.allenai.org/">A repository of language tasks and their instructions</a></li>
+                <li><a href="https://instructions.apps.allenai.org/">A repository of language tasks and their
+                    instructions</a></li>
             </ul>
         </li>
         <li>Tutorials:</li>
         <ul>
             <li><a href="https://pytorch.org/tutorials/">These tutorials</a> do a good job of introducing PyTorch.</li>
-            <li>A <a href="https://huggingface.co/course/chapter1/1">course</a> on Huggingface's Transformers library.</li>
-            <li><a href="https://huggingface.co/blog/stable_diffusion">Tutorial on Huggingface's Diffusers library </a></li>
-            <li><a href="https://d2l.ai/">Dive into Deep Learning</a>: Interactive deep learning book with code, math, and discussions.</li>
+            <li>A <a href="https://huggingface.co/course/chapter1/1">course</a> on Huggingface's Transformers library.
+            </li>
+            <li><a href="https://huggingface.co/blog/stable_diffusion">Tutorial on Huggingface's Diffusers library </a>
+            </li>
+            <li><a href="https://d2l.ai/">Dive into Deep Learning</a>: Interactive deep learning book with code, math,
+                and discussions.
+            </li>
         </ul>
     </ul>
     <p>
@@ -1042,24 +795,22 @@ Ground Truth Labels</a></li>
     </p>
     <p>
         The Johns Hopkins University is committed to equal opportunity for its faculty, staff, and students.
-        To that end, the university does not discriminate on the basis of sex, gender, marital status, pregnancy, race, color, ethnicity, national origin, age, disability, religion, sexual orientation, gender identity or expression, veteran status, military status, immigration status or other legally protected characteristic.
-        The University's <a href="https://oie.jhu.edu/policies-and-laws/JHU-Discrimination-and-Harassment-Policy-and-Procedures-7.1.21-Present">Discrimination and Harassment Policy and Procedures</a> provides information on how to report or file a complaint of discrimination or harassment based on any of the protected statuses listed in the earlier sentence, and the University’s prompt and equitable response to such complaints.
+        To that end, the university does not discriminate on the basis of sex, gender, marital status, pregnancy, race,
+        color, ethnicity, national origin, age, disability, religion, sexual orientation, gender identity or expression,
+        veteran status, military status, immigration status or other legally protected characteristic.
+        The University's <a
+            href="https://oie.jhu.edu/policies-and-laws/JHU-Discrimination-and-Harassment-Policy-and-Procedures-7.1.21-Present">Discrimination
+        and Harassment Policy and Procedures</a> provides information on how to report or file a complaint of
+        discrimination or harassment based on any of the protected statuses listed in the earlier sentence, and the
+        University’s prompt and equitable response to such complaints.
     </p>
 </div>
 
 <div class="container sec" id="relevant-courses">
-    <h2>Relevant Courses</h2>
-    <ul>
-        <li><a href="https://stanford-cs324.github.io/winter2022/"> Stanford CS324 - Large Language Models</a>: content inspiration</li>
-        <li><a href="https://web.stanford.edu/class/cs25/"> Stanford CS25: Transformers United!</a>: content inspiration </li>
-        <li><a href="https://people.cs.umass.edu/~miyyer/cs685/"> UMass CS 685: Advanced Natural Language Processing</a>: content inspiration</li>
-        <li><a href="https://www.cs.princeton.edu/courses/archive/fall22/cos597G/"> Princeton COS 597G: Understanding Large Language Models</a>: content inspiration</li>
-        <li><a href="https://github.com/craffel/dl3d-seminar"> UNC COMP790: (Deep) Learning with Limited Labeled Data  (DL3D)</a>: role-playing format inspiration</li>
-        <li><a href="https://github.com/craffel/llm-seminar/"> COMP790-101: Large Language Models</a></li>
-        <li><a href="https://isminoula.github.io/cs6604SP21/"> Virginia Tech CS 6604: Data Challenges in Machine Learning</a></li>
-    </ul>
+    <h2>Relevant Courses at Hopkins</h2>
+    <p>Has some overlap with Natural Language Processing (EN.601/665) and “Introduction to Human Language Technology”
+        (601.467/667) but they focus on different topics. </p>
 </div>
-
 
 <!-- jQuery and Bootstrap -->
 <script src="files/jquery.min.js"></script>
