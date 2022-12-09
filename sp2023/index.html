@@ -102,8 +102,13 @@
         such as Machine Learning (475.675), Artificial Intelligence (464.664), Natural Language Processing (600.465),
         Machine Translation (600.468), or Introduction to HLT (601.467/667).
     </p>
-
+    <p>
+        <strong>Relevant Courses at Hopkins</strong>:
+        This course has some overlap with "Natural Language Processing" (EN.601/665) and "Introduction to Human Language Technology"
+        (601.467/667) the courses have different focuses.</p>
 </div>
+
+
 
 <!-- Staff Info -->
 <div class="sechighlight">
@@ -145,7 +150,6 @@
         </div>
     </div>
 </div>
-
 <div class="container sec" id="logistics">
     <h2>Logistics</h2>
     <ul>
@@ -180,9 +184,9 @@
         <li>
             <b>Course grade:</b>
             Your grade is based on the following activities:
-            (1) Semi-weekly assignments (40%),
-            (2) midterm exams (30%), and
-            (3) a final project (30%).
+            (1) Semi-weekly assignments (50%),
+            (2) midterm exams (25%), and
+            (3) a final project (25%).
             Attendance is not mandatory (hence, 0%) but highly encouraged: participation in class is our chance to
             learn more effectively.
             [TBD: additional credits for any activities that improve the class]
@@ -191,7 +195,7 @@
     </ul>
     <br>
 </div>
-
+<hr>
 <div class="container sec" id="links">
     <h2>Key links</h2>
     <ul>
@@ -199,7 +203,7 @@
         <li><a href="">Gradescope</a> for submitting your assignments.</li>
     </ul>
 </div>
-
+<hr>
 <div class="container sec" id="course">
     <h2>Content</h2>
     <p>
@@ -219,91 +223,78 @@
     <table class="table">
         <colgroup>
             <col style="width:1%">
-            <col style="width:10%">
-            <col style="width:35%">
+            <col style="width:65%">
+
         </colgroup>
         <thead>
         <tr class="active">
             <th>#</th>
-            <th>Concept</th>
-            <th>Practice</th>
+            <th>Focus</th>
+<!--            <th>Practice</th>-->
         </tr>
         </thead>
         <tbody>
         <tr>
             <td>#1</td>
-            <td>Algebra, calculus, probability recap</td>
-            <td>PyTorch introduction, implementing Skip-Gram model, classification, evaluation, comparison to basic
-                features (unigrams, bigrams) and existing embeddings (Word2Vec, GloVe)
+            <td>Algebra, calculus, probability recap, PyTorch introduction, implementing Skip-Gram model, classification, evaluation, comparison to basic
+                features (unigrams, bigrams) and existing embeddings (Word2vec, GloVe)
             </td>
         </tr>
         <tr>
             <td>#2</td>
-            <td>TBD</td>
             <td>Implementing Skim-gram with negative sampling, quantifying quality vs speed, co-occurrence matrix and
                 factorization, classification and comparison
             </td>
         </tr>
         <tr>
             <td>#3</td>
-            <td>TBD</td>
             <td>Automatic differentiation, computation graph, how to use PyTorch on GPUs, basic feedforward network and
-                back-propagation, Word2Vec as a feedforward net with automatic differentiation
+                back-propagation, Word2vec as a feedforward net with automatic differentiation
             </td>
         </tr>
         <tr>
             <td>#4</td>
-            <td>TBD</td>
             <td>Neural language model with feedforward network, evaluating language modeling, comparison to count-based
-                model, comparing the representation to Word2Vec
+                model, comparing the representation to Word2vec
             </td>
         </tr>
         <tr>
             <td>#5</td>
-            <td>TBD</td>
             <td>Recurrent neural language model and evaluation, comparison to all the earlier models</td>
         </tr>
         <tr>
             <td>#6</td>
-            <td>TBD</td>
-            <td>Transformer-based language model, comparison to the earlier models, distributed training </td>
+            <td>Transformer-based language model, comparison to the earlier models, distributed training</td>
         </tr>
         <tr>
             <td>#7</td>
-            <td>TBD</td>
-            <td>Decoding language models: greedy, nucleus, typical. Various issues related to text generation.</td>
+            <td>Decoding language models: greedy, nucleus, typical; various issues related to text generation.</td>
         </tr>
         <tr>
             <td>#8</td>
-            <td>TBD</td>
-            <td>Fine-tuning, prefix-tuning, adapting existing models, comparison to the earlier models.
-                [Mis]-Interpreting continuous prompts.
+            <td>Fine-tuning, prefix-tuning, adapting existing models, comparison to the earlier model;
+                [mis]-Interpreting continuous prompts.
             </td>
         </tr>
         <tr>
             <td>#9</td>
-            <td>TBD</td>
             <td>Modifying Transformer for long contexts</td>
         </tr>
         <tr>
             <td>#10</td>
-            <td>TBD</td>
-            <td>In-context learning</td>
+            <td>In-context learning; dealing with uncertainties</td>
         </tr>
         <tr>
             <td>#11</td>
-            <td>TBD</td>
             <td>Retrieval-augmented language models</td>
         </tr>
         <tr>
             <td>#12</td>
-            <td>TBD</td>
             <td>Alignment with human feedback</td>
         </tr>
         <tr>
             <td>#13</td>
-            <td>TBD</td>
-            <td></td>
+            <td>Building multi-modal models </td>
         </tr>
 
         </tbody>
@@ -311,7 +302,7 @@
 
 
     <ul>
-<!--        <li><b>Assignment deadlines:</b> .</li>-->
+        <!--        <li><b>Assignment deadlines:</b> .</li>-->
         <li><b>Submission:</b> Assignments must be submitted via GradeScope</li>
         <li><b>Collaboration:</b> Study groups are allowed, but students must understand and complete their own
             assignments, and hand in one assignment per student. If you worked in a group, please put the names of the
@@ -320,9 +311,12 @@
         </li>
         <!--        <li><b>Late start:</b>If the result gives you a higher grade, we will not use your assignment 1 score, and we will give you an assignment grade based on counting each of assignments 2–5 at 13.5%.</li>-->
         <li><b>Honor code:</b>
-        We expect students to not look at solutions or implementations online. Like all other classes at Stanford, we
-        take the student Honor Code seriously. We sometimes use automated methods to detect overly similar assignment
-        solutions.</li>
+            We expect students to not look at solutions or implementations online. Like all other classes at Stanford,
+            we
+            take the student Honor Code seriously. We sometimes use automated methods to detect overly similar
+            assignment
+            solutions.
+        </li>
         <li><b>Late days:</b>
             Each student has 10 late days to use. A late day extends the deadline 24 hours. You can use up to 3 late
             days per assignment (including all five assignments, project proposal, project milestone, and project final
@@ -339,33 +333,48 @@
         TBD
     </p>
 
-    <h3>Reference text</h3>
-    <p>
-        There is no required text. Though the following can be useful:
-    </p>
-    <ul>
-        <li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing, Jurafsky and Martin</a>
-        </li>
-        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9689868">Natural language processing with PyTorch,
-            Rao, and McMahan</a></li>
-        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9697352">Transformers for Natural Language Processing,
-            Rothman </a></li>
-        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9822241">Neural Network Methods for Natural Language
-            Processing, Goldberg </a></li>
-        <li><a href="https://d2l.ai/">Dive into Deep Learning, Zhang et al. </a></li>
-    </ul>
-
 
     <h3>Final project</h3>
+
+
     <p>
-        TBD
+        All students in the class will write a "mini-paper" as a final project. The topic of this project is open-ended.
+        This project, for example, can focus on demonstrate systemic limitations of a prior work
+        or suggesting improvements on methods or benchmarks discussed in the class.
+        <!--        reproducing one or more papers covered in the class (or relevant works)-->
+        <!--        or extending them.-->
     </p>
+    <ul>
+
+        <li><b>Group work:</b> Students are encouraged to work in groups on the final project (team sizes limited to 2
+            or
+            3 people).
+        </li>
+        <li><b>Project proposals:</b> All groups will be required to submit a project proposal due on Friday Sept 30.
+            The project proposal is a single-paragraph description of what you intend to do (experiments, datasets,
+            methods, etc.) The instructor(s) will provide feedback on these ideas to help the teams with finding a
+            concrete idea. There will be lightning presentations of the finalized proposals on Thursday Oct 13.
+        </li>
+        <li><b>Midway progress presentation:</b> Groups will present their halfway progress during a mid-way project
+            presentation on Tuesday Nov 15. This is expected to be a short presentation discussing the progress made for
+            each project and
+            any remaining hurdles.
+        </li>
+        <li><b>Final presentation:</b> The final project presentation will be during the final exam period. All students
+            in each group are required to present some material during the final presentation.
+        </li>
+        <li><b>Final Report:</b> Students should write code and carry out additional experiments and then write up the
+            results in a standard conference paper format (<a
+                    href="https://www.overleaf.com/latex/templates/neurips-2022/kxymzbjpwsqx">template</a>).
+            The length of the final report should be 5 to 8 pages. Note that longer reports are not necessarily better.
+            Students in groups are required to include a “contributions” section concretely lists each
+            author’s contributions (see Section 8 of this paper, for example).
+            <!--            The final reports are due TBD.-->
+        </li>
+    </ul>
 
 </div>
-
-<!--[TODO: how to change the roles? consult with the instructor]-->
-
-
+<hr>
 <div class="container sec" id="schedule" style="margin-top:-20px">
     <br>
     <h2>Schedule</h2>
@@ -396,14 +405,14 @@
                 <br>
                 Plan and expectations
                 <br>
-                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcXd1egC6fJBs9G8W2J1ndkBXT78Jv_pSNSQcXaGhrr1zw?e=iiSLkK">slides</a>]
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcXd1egC6fJBs9G8W2J1ndkBXT78Jv_pSNSQcXaGhrr1zw?e=iiSLkK">slides</a>]
             </td>
             <td>
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Self-supervised Word Representations</b>
             </td>
         </tr>
@@ -413,14 +422,14 @@
                 Human language and word meaning <br>
                 Word2vec overview <br>
                 Word2vec objective function <br>
-                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ESGXc8UidHVLlq2GRHPj8_8BZiV6_FlpQ7-XBULiQoZlSw?e=gfffqc">slides</a>]
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ESGXc8UidHVLlq2GRHPj8_8BZiV6_FlpQ7-XBULiQoZlSw?e=gfffqc">slides</a>]
             </td>
             <td></td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -436,15 +445,15 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Representation of Feedforward Neural Language Models</b>
             </td>
         </tr>
@@ -463,17 +472,17 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight2">
-            <td>Fri  Feb 3</td>
-            <td>PyTorch Review Session (virtual) </td>
-            <td>Time: TBD </td>
+            <td>Fri Feb 3</td>
+            <td>PyTorch Review Session (virtual)</td>
+            <td>Time: TBD</td>
             <td></td>
             <td></td>
         </tr>
@@ -484,22 +493,22 @@
                 Automatic differentiation and computation graph <br>
                 Practical tips for training neural networks <br>
                 Evaluating language generation
-<!--                <br>-->
-<!--                [<a href="files/?">slides</a>]-->
+                <!--                <br>-->
+                <!--                [<a href="files/?">slides</a>]-->
             </td>
             <td>
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Representation of Recurrent Neural Language Models</b>
             </td>
         </tr>
@@ -511,16 +520,16 @@
                 Sequence-to-sequence model <br>
                 Training Seq2Seq models <br>
 
-<!--                <br>-->
-<!--                [<a href="files/?">slides</a>]-->
+                <!--                <br>-->
+                <!--                [<a href="files/?">slides</a>]-->
             </td>
             <td>
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -529,8 +538,8 @@
             <td>
                 Vanishing/exploding gradients <br>
                 Fancy versions of RNNs: <br>
-                    - Bidirectional RNN,<br>
-                    - stacked RNN, etc. <br>
+                - Bidirectional RNN,<br>
+                - stacked RNN, etc. <br>
                 Seq2Seq with Attention <br>
                 Aside: Input units: words, subwords, characters, byte
             </td>
@@ -538,41 +547,41 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Representation of Transformer Language Models</b>
             </td>
         </tr>
         <tr>
             <td>#8 - Thu Feb 16</td>
             <td>
-                Self-attention: how it works   <br>
-                Positional embeddings  <br>
-                Positional complexity  <br>
+                Self-attention: how it works <br>
+                Positional embeddings <br>
+                Positional complexity <br>
                 Self-attention: hacks and variants <br>
             </td>
             <td>
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight2">
-            <td>Fri  Feb 17</td>
-            <td>PyTorch Review Session (virtual) </td>
-            <td>Time: TBD </td>
+            <td>Fri Feb 17</td>
+            <td>PyTorch Review Session (virtual)</td>
+            <td>Time: TBD</td>
             <td></td>
             <td></td>
         </tr>
@@ -589,15 +598,15 @@
             <td>
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Doing Things with Language Models</b>
             </td>
         </tr>
@@ -606,8 +615,8 @@
             <td>
                 Generation and surprisal <br>
                 Text generation algorithms:<br>
-                 - greedy decoding, <br>
-                 - stochastic (top-k, nucleus) <br>
+                - greedy decoding, <br>
+                - stochastic (top-k, nucleus) <br>
                 - exhaustive search <br>
                 - beam search <br>
             </td>
@@ -615,10 +624,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -634,10 +643,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -654,10 +663,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -675,15 +684,15 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Language Models and Long Context</b>
             </td>
         </tr>
@@ -696,22 +705,23 @@
                 - Review of retrieval <br>
                 - Dense retrieval <br>
                 - Case study: answering factual questions
-            </td> <td>
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+            </td>
+            <td>
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
 
-<!--        <tr class="sechighlight">-->
-<!--            <td colspan="5" >-->
-<!--                <b> ⬇️ &#45;&#45; Social Concerns</b>-->
-<!--            </td>-->
-<!--        </tr>-->
+        <!--        <tr class="sechighlight">-->
+        <!--            <td colspan="5" >-->
+        <!--                <b> ⬇️ &#45;&#45; Social Concerns</b>-->
+        <!--            </td>-->
+        <!--        </tr>-->
 
 
         <tr>
@@ -721,15 +731,15 @@
             </td>
             <td></td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Social Concerns and Alignment with Human Values </b>
             </td>
         </tr>
@@ -744,10 +754,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -792,10 +802,10 @@
             <td>
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -810,15 +820,15 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Memorization, Security and Privacy </b>
             </td>
         </tr>
@@ -834,10 +844,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -850,15 +860,15 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Learning Text and Other Modalities</b>
             </td>
         </tr>
@@ -869,10 +879,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -880,17 +890,17 @@
             <td>#24 - Thu Apr 13</td>
             <td>
                 Language grounded in structured layouts (web pages, phone apps, ...)
-<!--                <br>-->
-<!--                Language and app layouts-->
+                <!--                <br>-->
+                <!--                Language and app layouts-->
             </td>
             <td>
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -901,10 +911,10 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
 
@@ -916,15 +926,15 @@
 
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
         <tr class="sechighlight">
-            <td colspan="5" >
+            <td colspan="5">
                 <b> ⬇️ -- Future of Self-Supervised Models</b>
             </td>
         </tr>
@@ -939,10 +949,10 @@
             <td>
             </td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
         </tr>
         <tr>
@@ -955,10 +965,10 @@
             </td>
             <td></td>
             <td>
-<!--                <ol>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                    <li><a href="">tbd</a></li>-->
-<!--                </ol>-->
+                <!--                <ol>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                    <li><a href="">tbd</a></li>-->
+                <!--                </ol>-->
             </td>
             <td></td>
         </tr>
@@ -1036,46 +1046,26 @@
         </tbody>
     </table>
 </div>
-
-<div class="container sechighlight" id="project">
-    <h2>Project</h2>
+<hr>
+<div class="container">
+    <h2>Reference text</h2>
     <p>
-        All students in the class will write a "mini-paper" as a final project. The topic of this project is open-ended.
-        This project, for example, can focus on demonstrate systemic limitations of a prior work
-        or suggesting improvements on methods or benchmarks discussed in the class.
-        <!--        reproducing one or more papers covered in the class (or relevant works)-->
-        <!--        or extending them.-->
+        There is no required text. Though the following can be useful:
     </p>
     <ul>
-
-        <li><b>Group work:</b> Students are encouraged to work in groups on the final project (team sizes limited to 2
-            or
-            3 people).
+        <li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing, Jurafsky and Martin</a>
         </li>
-        <li><b>Project proposals:</b> All groups will be required to submit a project proposal due on Friday Sept 30.
-            The project proposal is a single-paragraph description of what you intend to do (experiments, datasets,
-            methods, etc.) The instructor(s) will provide feedback on these ideas to help the teams with finding a
-            concrete idea. There will be lightning presentations of the finalized proposals on Thursday Oct 13.
-        </li>
-        <li><b>Midway progress presentation:</b> Groups will present their halfway progress during a mid-way project
-            presentation on Tuesday Nov 15. This is expected to be a short presentation discussing the progress made for
-            each project and
-            any remaining hurdles.
-        </li>
-        <li><b>Final presentation:</b> The final project presentation will be during the final exam period. All students
-            in each group are required to present some material during the final presentation.
-        </li>
-        <li><b>Final Report:</b> Students should write code and carry out additional experiments and then write up the
-            results in a standard conference paper format (<a
-                    href="https://www.overleaf.com/latex/templates/neurips-2022/kxymzbjpwsqx">template</a>).
-            The length of the final report should be 5 to 8 pages. Note that longer reports are not necessarily better.
-            Students in groups are required to include a “contributions” section concretely lists each
-            author’s contributions (see Section 8 of this paper, for example).
-            <!--            The final reports are due TBD.-->
-        </li>
+        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9689868">Natural language processing with PyTorch,
+            Rao, and McMahan</a></li>
+        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9697352">Transformers for Natural Language Processing,
+            Rothman </a></li>
+        <li><a href="https://catalyst.library.jhu.edu/catalog/bib_9822241">Neural Network Methods for Natural Language
+            Processing, Goldberg </a></li>
+        <li><a href="https://d2l.ai/">Dive into Deep Learning, Zhang et al. </a></li>
     </ul>
-</div>
 
+</div>
+<hr>
 <div class="container sec" id="resources">
     <h2>Relevant Resources</h2>
     <p>Here are several resources available for free:</p>
@@ -1134,13 +1124,8 @@
     </p>
 </div>
 
-<div class="container sec" id="relevant-courses">
-    <h2>Relevant Courses at Hopkins</h2>
-    <p>Has some overlap with Natural Language Processing (EN.601/665) and “Introduction to Human Language Technology”
-        (601.467/667) but they focus on different topics. </p>
-</div>
 
-
+<hr>
 <div class="container sec" id="conduct">
     <h2>Conduct</h2>
     <p>
