@@ -180,7 +180,7 @@
         <li>
             <b>Course grade:</b>
             Your grade is based on the following activities:
-            (1) weekly assignments (40%),
+            (1) Semi-weekly assignments (40%),
             (2) midterm exams (30%), and
             (3) a final project (30%).
             Attendance is not mandatory (hence, 0%) but highly encouraged: participation in class is our chance to
@@ -207,7 +207,7 @@
         There will be weekly assignments related to class presentations, two midterm exams and a final project.
     </p>
 
-    <h3>Weekly assignment</h3>
+    <h3>~Weekly Assignments</h3>
     <p>
         The course has 10 weekly assignments which will improve both your theoretical understanding
         and your practical skills. All assignments contain both written questions and programming parts.
@@ -248,7 +248,7 @@
             <td>#3</td>
             <td>TBD</td>
             <td>Automatic differentiation, computation graph, how to use PyTorch on GPUs, basic feedforward network and
-                back-propagation, Word2Vec as a feedforward net
+                back-propagation, Word2Vec as a feedforward net with automatic differentiation
             </td>
         </tr>
         <tr>
@@ -373,11 +373,11 @@
 
     <table class="table">
         <colgroup>
-            <col style="width:15%">
-            <col style="width:23%">
-            <col style="width:35%">
-            <col style="width:15%">
-            <col style="width:15%">
+            <col style="width:12%">
+            <col style="width:27%">
+            <col style="width:32%">
+            <col style="width:10%">
+            <col style="width:10%">
         </colgroup>
         <thead>
         <tr class="active">
@@ -402,7 +402,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Self-supervised Word Representations</b>
             </td>
@@ -410,8 +410,9 @@
         <tr>
             <td>#2 - Thu Jan 26</td>
             <td>
-                Representation Learning with Word2Vec
-                <br>
+                Human language and word meaning <br>
+                Word2vec overview <br>
+                Word2vec objective function <br>
                  [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ESGXc8UidHVLlq2GRHPj8_8BZiV6_FlpQ7-XBULiQoZlSw?e=gfffqc">slides</a>]
             </td>
             <td></td>
@@ -426,8 +427,9 @@
         <tr>
             <td>#3 - Tue Jan 31</td>
             <td>
-                Representation Learning with Word2Vec (continued)
-                <br>
+                Word2vec objective function (continued)<br>
+                Inspecting the resulting word vectors <br>
+                Evaluating word vectors <br>
                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/ESGXc8UidHVLlq2GRHPj8_8BZiV6_FlpQ7-XBULiQoZlSw?e=gfffqc">slides</a>]
             </td>
             <td>
@@ -441,7 +443,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Self-Supervised Representation of Feedforward Neural Language Models</b>
             </td>
@@ -449,7 +451,11 @@
         <tr>
             <td>#4 - Thu Feb 2</td>
             <td>
-                tbd
+                Word2vec limitations<br>
+                Feed-forward nets for modeling context <br>
+                Word2vec as simple feed-forward net <br>
+                A fixed-window feedforward language model <br>
+                Neural nets: brief history
                 <br>
                 [<a href="files/?">slides</a>]
             </td>
@@ -464,10 +470,20 @@
             </td>
             <td></td>
         </tr>
+        <tr class="sechighlight2">
+            <td>Fri  Feb 3</td>
+            <td>PyTorch Review Session (virtual) </td>
+            <td>Time: TBD </td>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <td>#5 - Tue Feb 7</td>
             <td>
-                tbd
+                Analytical back-propagation <br>
+                Automatic differentiation and computation graph <br>
+                Practical tips for training neural networks <br>
+                Evaluating language generation
 <!--                <br>-->
 <!--                [<a href="files/?">slides</a>]-->
             </td>
@@ -482,7 +498,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Self-Supervised Representation of Recurrent Neural Language Models</b>
             </td>
@@ -490,12 +506,15 @@
         <tr>
             <td>#6 - Thu Feb 9</td>
             <td>
-                tbd
+                Limitations of feed-forward language models <br>
+                Recurrent neural networks <br>
+                Sequence-to-sequence model <br>
+                Training Seq2Seq models <br>
+
 <!--                <br>-->
 <!--                [<a href="files/?">slides</a>]-->
             </td>
             <td>
-
             </td>
             <td>
 <!--                <ol>-->
@@ -507,7 +526,11 @@
         </tr>
         <tr>
             <td>#7 - Tue Feb 14</td>
-            <td>tbd</td>
+            <td>
+                Vanishing/exploding gradients <br>
+                Fancy versions of RNNs (Bidirectional RNN, stacked RNN, etc.) <br>
+                Seq2Seq with Attention
+            </td>
             <td>
 
             </td>
@@ -519,14 +542,19 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Self-Supervised Representation of Transformer Language Models</b>
             </td>
         </tr>
         <tr>
             <td>#8 - Thu Feb 16</td>
-            <td>tbd</td>
+            <td>
+                Self-attention: how it works   <br>
+                Positional embeddings  <br>
+                Positional complexity  <br>
+                Self-attention: hacks and variants <br>
+            </td>
             <td>
 
             </td>
@@ -536,11 +564,24 @@
 <!--                    <li><a href="">tbd</a></li>-->
 <!--                </ol>-->
             </td>
+            <td></td>
+        </tr>
+        <tr class="sechighlight2">
+            <td>Fri  Feb 17</td>
+            <td>PyTorch Review Session (virtual) </td>
+            <td>Time: TBD </td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td>#9 - Tue Feb 21</td>
-            <td>tbd</td>
+            <td>
+                Transformer architecture <br>
+                Various pre-training objective functions <br>
+                Existing models: BERT, RoBERTa, T5, GPT<br>
+                Multilingual properties <br>
+                Pre-training hacks
+            </td>
             <td>
 
             </td>
@@ -552,14 +593,21 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Doing Things with Language Models</b>
             </td>
         </tr>
         <tr>
             <td>#10 - Thu Feb 23</td>
-            <td>tbd</td>
+            <td>
+                Generation and surprisal <br>
+                Text generation algorithms:<br>
+                 - greedy decoding, <br>
+                 - stochastic (top-k, nucleus) <br>
+                - exhaustive search <br>
+                - beam search <br>
+            </td>
             <td>
 
             </td>
@@ -613,7 +661,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Language Models and Long Context</b>
             </td>
@@ -634,7 +682,7 @@
             <td></td>
         </tr>
 
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Social Concerns</b>
             </td>
@@ -697,7 +745,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Alignment with Human Values </b>
             </td>
@@ -730,7 +778,7 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Memorization, Security and Privacy </b>
             </td>
@@ -764,14 +812,14 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Self-Supervised Learning Text and Other Modalities</b>
             </td>
         </tr>
         <tr>
             <td>#23 - Tue Apr 11</td>
-            <td>tbd</td>
+            <td>Language and programing code</td>
             <td>
 
             </td>
@@ -785,7 +833,10 @@
         </tr>
         <tr>
             <td>#24 - Thu Apr 13</td>
-            <td>tbd</td>
+            <td>
+                Language on web pages <br>
+                Language and app layouts
+            </td>
             <td>
 
             </td>
@@ -799,7 +850,7 @@
         </tr>
         <tr>
             <td>#25 - Tue Apr 18</td>
-            <td>tbd</td>
+            <td>Language and vision</td>
             <td>
 
             </td>
@@ -814,7 +865,7 @@
         </tr>
         <tr>
             <td>#26 - Thu Apr 20</td>
-            <td>tbd</td>
+            <td>Language and speech</td>
             <td>
 
             </td>
@@ -826,16 +877,20 @@
             </td>
             <td></td>
         </tr>
-        <tr class="sechighlight3">
+        <tr class="sechighlight">
             <td colspan="5" >
                 <b> ⬇️ -- Future of Self-Supervised Models</b>
             </td>
         </tr>
         <tr>
             <td>#27 - Tue Apr 25</td>
-            <td>tbd</td>
             <td>
-
+                Bias/fairness concerns and feedback loops <br>
+                Environmental concerns <br>
+                Privacy and security issues <br>
+                Legal issues
+            </td>
+            <td>
             </td>
             <td>
 <!--                <ol>-->
@@ -846,10 +901,13 @@
         </tr>
         <tr>
             <td>#28 - Thu Apr 27</td>
-            <td></td>
             <td>
-
+                Future of self-supervised models <br>
+                Availability of data <br>
+                Availability of compute <br>
+                Limitations and open problems
             </td>
+            <td></td>
             <td>
 <!--                <ol>-->
 <!--                    <li><a href="">tbd</a></li>-->
@@ -861,9 +919,7 @@
         <tr class="sechighlight4 centered">
             <td>#29 - Tue May 2</td>
             <td>No Class - Reading Days</td>
-            <td>
-
-            </td>
+            <td></td>
             <td>
                 <!--                <ol>-->
                 <!--                    <li><a href="">tbd</a></li>-->
