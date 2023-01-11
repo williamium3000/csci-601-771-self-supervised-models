@@ -241,9 +241,9 @@
         <tbody>
         <tr>
             <td>#1</td>
-            <td>Algebra, calculus, probability recap, PyTorch introduction, implementing Skip-Gram model,
+            <td>Algebra, calculus, probability recap, implementing Skip-Gram model,
                 classification, evaluation, comparison to basic
-                features (unigrams, bigrams) and existing embeddings (Word2vec, GloVe)
+                features (unigrams, bigrams) and existing word embeddings.
             </td>
         </tr>
         <tr>
@@ -254,7 +254,7 @@
         </tr>
         <tr>
             <td>#3</td>
-            <td>Automatic differentiation, computation graph, how to use PyTorch on GPUs, basic feedforward network and
+            <td>PyTorch introduction, automatic differentiation, computation graph, how to use PyTorch on GPUs, basic feedforward network and
                 back-propagation, Word2vec as a feedforward net with automatic differentiation
             </td>
         </tr>
@@ -378,7 +378,8 @@
 <div class="container sec">
     <h2>Midterm exam</h2>
     <p>
-        TBD
+        There will be one in-class midterm.
+        The details of this exam is TBD.
     </p>
 
 
@@ -588,11 +589,9 @@
             <td>#4 - Thu Feb 2</td>
             <td>
                 Word2vec limitations<br>
-                Feed-forward nets for modeling context <br>
-                Word2vec as simple feed-forward net <br>
-                A fixed-window feedforward language model <br>
-                Neural nets: brief history
-                <br>
+                Feedforward networks <br>
+                Neural nets: brief history <br>
+                Word2vec as simple feedforward net <br>
                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EQ7MvuDp-DNMocruGWQsxl0B3t-7e9-F034w6FWIvDpE4w?e=4TaVhZ">slides</a>]
             </td>
             <td>
@@ -624,10 +623,8 @@
             <td>#5 - Tue Feb 7</td>
             <td>
                 Analytical back-propagation <br>
-                Automatic differentiation and computation graph <br>
+                Automatic differentiation <br>
                 Practical tips for training neural networks <br>
-                Evaluating language generation
-                <br>
                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EQ7MvuDp-DNMocruGWQsxl0B3t-7e9-F034w6FWIvDpE4w?e=4TaVhZ">slides</a>]
             </td>
             <td>
@@ -645,19 +642,44 @@
             </td>
             <td></td>
         </tr>
+        <tr>
+            <td>#6 - Thu Feb 9</td>
+            <td>
+                Extending Word2Vec with FFNs
+                Language modeling objective <br>
+                N-gram language modeling  <br>
+                Measuring LM quality <br>
+                Language Modeling with FFN <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EcQ_yjHM8y9Dut5oto4Y8hsBSIQafkbDmbXJe0iuDkQfCQ?e=Nv5C5j">slides</a>]
+            </td>
+            <td>
+                <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">Jurafsky & Martin Chapter 7</a>
+                <br>
+
+                Suggested Reading:
+                <ol>
+                    <li><a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">Jurafsky & Martin Chapter 3</a></li>
+                    <li><a href="https://arxiv.org/abs/2104.03474">Revisiting Simple Neural Probabilistic Language Models </a></li>
+                </ol>
+            </td>
+            <td>
+            </td>
+            <td></td>
+        </tr>
         <tr class="sechighlight">
             <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Representation of Recurrent Neural Language Models</b>
             </td>
         </tr>
         <tr>
-            <td>#6 - Thu Feb 9</td>
-            <td>
-                Limitations of feed-forward language models <br>
+            <td>#7 - Tue Feb 14</td>
+                        <td>
+                Limitations of feedforward language models <br>
                 Recurrent neural networks <br>
                 Sequence-to-sequence model <br>
                 Training Seq2Seq models <br>
-
+                Aside: Input units: words, subwords, characters, bytes <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]
                 <!--                <br>-->
                 <!--                [<a href="files/?">slides</a>]-->
             </td>
@@ -676,45 +698,19 @@
             <td></td>
         </tr>
         <tr>
-            <td>#7 - Tue Feb 14</td>
-            <td>
-                Vanishing/exploding gradients <br>
-                Fancy versions of RNNs: <br>
-                - Bidirectional RNN,<br>
-                - stacked RNN, etc. <br>
-                Seq2Seq with Attention <br>
-                Aside: Input units: words, subwords, characters, bytes
-            </td>
-            <td>
-                <ol>
-                    <li><a href="http://preview.d2l.ai/d2l-en/master/chapter_recurrent-neural-networks/index.html">Dive
-                        into Deep Learning: Fancy RNNs</a></li>
-                    <!--                                    <li><a href="">tbd</a></li>-->
-                </ol>
-            </td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="sechighlight">
-            <td colspan="5">
-                <b> ⬇️ -- Self-Supervised Representation of Transformer Language Models</b>
-            </td>
-        </tr>
-        <tr>
             <td>#8 - Thu Feb 16</td>
+
             <td>
-                Self-attention: how it works <br>
-                Positional embeddings <br>
-                Positional complexity <br>
-                Self-attention: hacks and variants <br>
+                Review session
+<!--                <br>-->
+<!--                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]-->
             </td>
             <td>
-                <ol>
-                    <li>
-                        <a href="http://preview.d2l.ai/d2l-en/master/chapter_attention-mechanisms-and-transformers/index.html">Dive
-                            into Deep Learning: Attention Mechanism</a></li>
-                    <!--                    <li><a href="">tbd</a></li>-->
-                </ol>
+<!--                <ol>-->
+<!--                    <li><a href="http://preview.d2l.ai/d2l-en/master/chapter_recurrent-neural-networks/index.html">Dive-->
+<!--                        into Deep Learning: Fancy RNNs</a></li>-->
+<!--                    &lt;!&ndash;                                    <li><a href="">tbd</a></li>&ndash;&gt;-->
+<!--                </ol>-->
             </td>
             <td></td>
             <td></td>
@@ -726,8 +722,41 @@
             <td></td>
             <td></td>
         </tr>
+        <tr class="sechighlight">
+            <td colspan="5">
+                <b> ⬇️ -- Self-Supervised Representation of Transformer Language Models</b>
+            </td>
+        </tr>
         <tr>
             <td>#9 - Tue Feb 21</td>
+            <td>
+                Self-attention: how it works <br>
+                Positional embeddings <br>
+                Computational complexity <br>
+                Self-attention: hacks and variants
+                <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EdzFmMJH7TRHrGRKDrE2utYBoDdAU8s6sgXh4gGkjVyp0g?e=cahJdA">slides</a>]
+            </td>
+            <td>
+                <a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a>
+                <br>
+                Suggested reading:
+                <ol>
+                    <li>
+                        <a href="http://preview.d2l.ai/d2l-en/master/chapter_attention-mechanisms-and-transformers/index.html">Dive
+                            into Deep Learning: Attention Mechanism</a></li>
+                    <li></li>
+                    <li><a href="http://nlp.seas.harvard.edu/annotated-transformer/">The Annotated Transformer  </a></li>
+                    <li><a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a></li>
+                    <!--                    <li><a href="">tbd</a></li>-->
+                </ol>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>#10 - Thu Feb 23</td>
+
             <td>
                 Transformer architecture <br>
                 Various pre-training objective functions <br>
@@ -735,15 +764,20 @@
                 Scaling laws <br>
                 Multilingual properties <br>
                 Pre-training hacks
+                <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EdzFmMJH7TRHrGRKDrE2utYBoDdAU8s6sgXh4gGkjVyp0g?e=cahJdA">slides</a>]
             </td>
             <td>
+                <a href="">TBD</a>
+                <br>
+                Suggested reading:
+                <ol>
+                    <li><a href="https://jalammar.github.io/illustrated-bert/">The Illustrated BERT, ELMo, and co</a></li>
+                    <li><a href="https://www.jmlr.org/papers/volume21/20-074/20-074.pdf">Exploring the limits of transfer learning with a unified text-to-text transformer</a></li>
+                    <li><a href="https://arxiv.org/abs/1910.13461">BART: Denoising Sequence-to-Sequence Pre-training </a></li>
+                </ol>
             </td>
-            <td>
-                <!--                <ol>-->
-                <!--                    <li><a href="">tbd</a></li>-->
-                <!--                    <li><a href="">tbd</a></li>-->
-                <!--                </ol>-->
-            </td>
+            <td></td>
             <td></td>
         </tr>
         <tr class="sechighlight">
@@ -752,7 +786,7 @@
             </td>
         </tr>
         <tr>
-            <td>#10 - Thu Feb 23</td>
+            <td>#11 - Tue Feb 28</td>
             <td>
                 Generation and surprisal <br>
                 Text generation algorithms:<br>
@@ -760,25 +794,11 @@
                 - stochastic (top-k, nucleus) <br>
                 - exhaustive search <br>
                 - beam search <br>
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <!--                <ol>-->
-                <!--                    <li><a href="">tbd</a></li>-->
-                <!--                    <li><a href="">tbd</a></li>-->
-                <!--                </ol>-->
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>#11 - Tue Feb 28</td>
-            <td>
-                Adapting models with parameter change <br>
+              Adapting models with parameter change <br>
                 Fine-tuning <br>
                 Prefix-tuning <br>
                 Adaptors <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EdzFmMJH7TRHrGRKDrE2utYBoDdAU8s6sgXh4gGkjVyp0g?e=cahJdA">slides</a>]
             </td>
             <td>
 
