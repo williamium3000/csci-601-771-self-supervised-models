@@ -657,11 +657,9 @@ and their Compositionality </a> (Negative Sampling paper)</li>
         <tr>
             <td>#6 - Thu Feb 9</td>
             <td>
-                Extending Word2Vec with FFNs
                 Language modeling objective <br>
                 N-gram language modeling  <br>
-                Measuring LM quality <br>
-                Language Modeling with FFN <br>
+
                 [<a href="files/06.feedforward-nets-3.pdf">slides</a>]
                 [<a href="files/06.neural-language-modeling.pdf">slides</a>]
             </td>
@@ -687,23 +685,46 @@ and their Compositionality </a> (Negative Sampling paper)</li>
             <td></td>
             <td></td>
         </tr>
+        <tr>
+            <td>#7 - Tue Feb 14</td>
+            <td>
+                Measuring LM quality <br>
+                Fixed-window language modeling with FFNs <br>
+                Text generation algorithms:<br>
+                - greedy decoding, <br>
+                - stochastic (top-k, nucleus) <br>
+                - exhaustive search <br>
+                - beam search <br>
+                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EQV6ifsbDw1Mh_kxl1tcCw0Bx727YMO4ioDUSW-4U8eHhw?e=u19ZRH">slides</a>]
+            </td>
+            <td>
+                Suggested Reading: <a href="https://web.stanford.edu/~jurafsky/slp3/7.pdf">Jurafsky & Martin Chapter 7</a>
+                <br>
+                Additional Reading:
+                <ol>
+                    <li><a href="A Neural Probabilistic Language Model">Prediction and Entropy of Printed English </a> (the foundational paper by Shannon on language compression and uncertainty)</li>
+                    <li><a href="https://arxiv.org/abs/2104.03474">Revisiting Simple Neural Probabilistic Language Models </a> </li>
+                    <li><a href="https://arxiv.org/abs/1904.09751">The Curious Case of Neural Text Degeneration</a> </li>
+                </ol>
+            </td>
+            <td></td>
+            <td>HW3 due</td>
+        </tr>
         <tr class="sechighlight">
             <td colspan="5">
                 <b> ⬇️ -- Self-Supervised Representation of Recurrent Neural Language Models</b>
             </td>
         </tr>
         <tr>
-            <td>#7 - Tue Feb 14</td>
-                        <td>
-                Limitations of feedforward language models <br>
+            <td>#8 - Thu Feb 16</td>
+            <td>
                 Recurrent neural networks <br>
                 Sequence-to-sequence model <br>
                 Training Seq2Seq models <br>
-                Aside: Input units: words, subwords, characters, bytes <br>
-                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EQV6ifsbDw1Mh_kxl1tcCw0Bx727YMO4ioDUSW-4U8eHhw?e=u19ZRH">slides</a>]
+                Aside: language units and subwords <br>
                 [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]
-                <!--                <br>-->
-                <!--                [<a href="files/?">slides</a>]-->
+<!--                <br>-->
+<!--                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]-->
             </td>
             <td>
                 Suggested Reading: <a href="https://cs231n.github.io/rnn/">CS231N course notes on RNNs</a>
@@ -716,25 +737,6 @@ and their Compositionality </a> (Negative Sampling paper)</li>
                     <li><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a> (blog post overview)</li>
                     <li><a href="http://www.iro.umontreal.ca/~lisa/pointeurs/ieeetrnn94.pdf">Learning long-term dependencies with gradient descent is difficult</a> (one of the original vanishing gradient papers)</li>
                 </ol>
-            </td>
-            <td></td>
-            <td>HW3 due</td>
-        </tr>
-        <tr>
-            <td>#8 - Thu Feb 16</td>
-
-            <td>
-                Generation and surprisal <br>
-                Text generation algorithms:<br>
-                - greedy decoding, <br>
-                - stochastic (top-k, nucleus) <br>
-                - exhaustive search <br>
-                - beam search <br>
-                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]
-<!--                <br>-->
-<!--                [<a href="https://livejohnshopkins-my.sharepoint.com/:p:/g/personal/dkhasha1_jh_edu/EYDx8FB1a6FCluzNGz5y25MBUL7kWd58-swwcEf_8gJdsA?e=aeag5V">slides</a>]-->
-            </td>
-            <td>
 <!--                <ol>-->
 <!--                    <li><a href="http://preview.d2l.ai/d2l-en/master/chapter_recurrent-neural-networks/index.html">Dive-->
 <!--                        into Deep Learning: Fancy RNNs</a></li>-->
