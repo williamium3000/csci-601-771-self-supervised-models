@@ -185,17 +185,16 @@ def pre_process(model_name, batch_size, device, small_subset=False):
 
     print("Slicing the data...")
     if small_subset:
-        dataset_train_subset = dataset['train'][:20]
-        dataset_dev_subset = dataset['validation'][:20]
-        dataset_test_subset = dataset['train'][
-                              :20]  # use the subset of the test set for making the experimentation faster
+        # use this tiny subset for debugging the implementation
+        dataset_train_subset = dataset['train'][:10]
+        dataset_dev_subset = dataset['train'][:10]
+        dataset_test_subset = dataset['train'][:10]
     else:
         # since the dataset does not come with any validation data,
         # split the training data into "train" and "dev"
         dataset_train_subset = dataset['train'][:8000]
         dataset_dev_subset = dataset['validation']
-        dataset_test_subset = dataset['train'][
-                              8000:]  # use the subset of the test set for making the experimentation faster
+        dataset_test_subset = dataset['train'][8000:]
 
     # maximum length of the input; any input longer than this will be truncated
     # we had to do some pre-processing on the data to figure what is the length of most instances in the dataset
@@ -267,6 +266,13 @@ if __name__ == "__main__":
 
         # print the GPU memory usage just to make sure things are alright
         print_gpu_memory()
+
+        val_accuracy = ...
+        print(f" - Average DEV metrics: accuracy={val_accuracy}")
+
+        test_accuracy = ...
+        print(f" - Average TEST metrics: accuracy={test_accuracy}")
+
     else:
         # you can add more experiments here
         pass
