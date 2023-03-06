@@ -260,19 +260,14 @@ if __name__ == "__main__":
                                                                                              args.device,
                                                                                              args.small_subset)
 
-    if args.experiment == "overfit":
-        print(" >>>>>>>>  Starting training ... ")
-        train(...)
+    print(" >>>>>>>>  Starting training ... ")
+    train(...)
 
-        # print the GPU memory usage just to make sure things are alright
-        print_gpu_memory()
+    # print the GPU memory usage just to make sure things are alright
+    print_gpu_memory()
 
-        val_accuracy = ...
-        print(f" - Average DEV metrics: accuracy={val_accuracy}")
+    val_accuracy = ...
+    print(f" - Average DEV metrics: accuracy={val_accuracy}")
 
-        test_accuracy = ...
-        print(f" - Average TEST metrics: accuracy={test_accuracy}")
-
-    else:
-        # you can add more experiments here
-        pass
+    test_accuracy = ...
+    print(f" - Average TEST metrics: accuracy={test_accuracy}")

@@ -18,4 +18,4 @@ conda activate toy_classification_env # open the Python environment
 pip install -r requirements.txt # install Python dependencies
 
 # runs your code
-srun python classification.py  --experiment "overfit" --small_subset True --device cuda --model "distilbert-base-uncased" --batch_size "256" --lr 1e-5 --num_epochs 20
+srun python classification.py  --experiment "overfit" --small_subset True --device cuda --model "distilbert-base-uncased" --batch_size "256" --lr 1e-4 --num_epochs 20
