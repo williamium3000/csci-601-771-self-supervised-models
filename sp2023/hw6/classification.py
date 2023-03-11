@@ -177,7 +177,7 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
         print(f" - Average validation metrics: accuracy={val_accuracy}")
 
 
-def pre_process(model_name, batch_size, device, small_subset=False):
+def pre_process(model_name, batch_size, device, small_subset):
     # download dataset
     print("Loading the dataset ...")
     dataset = load_dataset("boolq")
@@ -195,6 +195,11 @@ def pre_process(model_name, batch_size, device, small_subset=False):
         dataset_train_subset = dataset['train'][:8000]
         dataset_dev_subset = dataset['validation']
         dataset_test_subset = dataset['train'][8000:]
+
+    print("Size of the loaded dataset:")
+    print(f" - train: {len(dataset_train_subset['passage'])}")
+    print(f" - dev: {len(dataset_dev_subset['passage'])}")
+    print(f" - test: {len(dataset_test_subset['passage'])}")
 
     # maximum length of the input; any input longer than this will be truncated
     # we had to do some pre-processing on the data to figure what is the length of most instances in the dataset
@@ -244,7 +249,7 @@ def pre_process(model_name, batch_size, device, small_subset=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--experiment", type=str, default=None)
-    parser.add_argument("--small_subset", type=bool, default=False)
+    parser.add_argument("--small_subset", action='store_true')
     parser.add_argument("--num_epochs", type=int, default=1)
     parser.add_argument("--lr", type=float, default=5e-5)
     parser.add_argument("--batch_size", type=int, default=32)
@@ -253,6 +258,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     print(f"Specified arguments: {args}")
+
+    assert type(args.small_subset) == bool, "small_subset must be a boolean"
 
     # load the data and models
     pretrained_model, train_dataloader, validation_dataloader, test_dataloader = pre_process(args.model,
