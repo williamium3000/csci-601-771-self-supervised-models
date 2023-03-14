@@ -13,7 +13,7 @@ now=$(date +"%Y%m%d_%H%M%S")
 mkdir -p $save_path
 
 srun -p gpuA40x4 -n 1 --gres=gpu:1 --ntasks-per-node=1 --cpus-per-task=3 --job-name=$job --mem-per-cpu=16GB --time 00-20:00:00 -A bbrt-delta-gpu  \
-python classification.py  \
+python classification_T5.py  \
 --experiment "train" --graph-name ${save_path}/plot \
 --device cuda --model $model \
---batch_size $bs --lr $lr --num_epochs $epoch 2>&1 | tee $save_path/$now.txt
+--batch_size $bs --lr $lr --num_epochs $epoch 2>&1 | tee $save_path/$now.txt &

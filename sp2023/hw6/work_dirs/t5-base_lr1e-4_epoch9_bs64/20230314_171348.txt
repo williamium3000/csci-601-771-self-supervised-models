@@ -1,0 +1,89 @@
+srun: job 1588619 queued and waiting for resources
+srun: job 1588619 has been allocated resources
+Found cached dataset boolq (/u/yli8/.cache/huggingface/datasets/boolq/default/0.1.0/bf0dd57da941c50de94ae3ce3cef7fea48c08f337a4b7aac484e9dddc5aa24e5)
+Specified arguments: Namespace(batch_size=64, device='cuda', experiment='train', graph_name='work_dirs/t5-base_lr1e-4_epoch9_bs64//plot', lr=0.0001, model='t5-base', num_epochs=9, small_subset=False)
+Loading the dataset ...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 1052.79it/s]
+/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/t5/tokenization_t5.py:163: FutureWarning: This tokenizer was incorrectly instantiated with a model max length of 512 which will be corrected in Transformers v5.
+For now, this behavior is kept to avoid breaking backwards compatibility when padding/encoding with `truncation is True`.
+- Be aware that you SHOULD NOT rely on t5-base automatically truncating your input to 512 when padding/encoding.
+- If you want to encode/pad to sequences longer than 512 you can either instantiate this tokenizer with `model_max_length` or pass `max_length` when encoding/padding.
+- To avoid this warning, please instantiate this tokenizer with `model_max_length` set to your preferred value.
+  warnings.warn(
+Some weights of the model checkpoint at t5-base were not used when initializing T5EncoderModel: ['decoder.block.7.layer.1.EncDecAttention.o.weight', 'decoder.block.7.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.1.EncDecAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.1.EncDecAttention.v.weight', 'decoder.block.11.layer.2.layer_norm.weight', 'decoder.block.2.layer.0.SelfAttention.q.weight', 'decoder.block.4.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.2.DenseReluDense.wo.weight', 'decoder.final_layer_norm.weight', 'decoder.block.1.layer.1.layer_norm.weight', 'decoder.block.8.layer.1.EncDecAttention.o.weight', 'decoder.block.1.layer.0.SelfAttention.q.weight', 'decoder.block.9.layer.2.DenseReluDense.wi.weight', 'decoder.block.7.layer.2.layer_norm.weight', 'decoder.block.5.layer.2.DenseReluDense.wi.weight', 'decoder.block.0.layer.2.DenseReluDense.wi.weight', 'decoder.block.6.layer.0.layer_norm.weight', 'decoder.block.0.layer.0.SelfAttention.v.weight', 'decoder.block.0.layer.2.layer_norm.weight', 'decoder.block.8.layer.0.SelfAttention.q.weight', 'decoder.block.10.layer.1.EncDecAttention.q.weight', 'decoder.block.9.layer.1.EncDecAttention.v.weight', 'decoder.block.8.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.2.DenseReluDense.wo.weight', 'decoder.block.0.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.0.SelfAttention.o.weight', 'decoder.block.6.layer.0.SelfAttention.q.weight', 'decoder.block.7.layer.0.layer_norm.weight', 'decoder.block.11.layer.1.EncDecAttention.k.weight', 'decoder.block.4.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.1.layer_norm.weight', 'decoder.block.10.layer.1.EncDecAttention.k.weight', 'decoder.block.10.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.1.EncDecAttention.k.weight', 'decoder.block.9.layer.0.SelfAttention.k.weight', 'decoder.block.7.layer.1.EncDecAttention.v.weight', 'decoder.block.11.layer.0.SelfAttention.v.weight', 'decoder.block.1.layer.2.DenseReluDense.wi.weight', 'decoder.block.10.layer.0.SelfAttention.q.weight', 'decoder.block.8.layer.0.SelfAttention.k.weight', 'decoder.block.2.layer.0.layer_norm.weight', 'decoder.block.11.layer.0.SelfAttention.k.weight', 'decoder.block.5.layer.0.SelfAttention.o.weight', 'decoder.block.11.layer.1.EncDecAttention.o.weight', 'decoder.block.4.layer.2.DenseReluDense.wo.weight', 'decoder.block.8.layer.0.SelfAttention.o.weight', 'decoder.block.9.layer.1.EncDecAttention.k.weight', 'decoder.block.8.layer.1.EncDecAttention.v.weight', 'decoder.block.4.layer.1.EncDecAttention.o.weight', 'decoder.block.5.layer.2.layer_norm.weight', 'decoder.block.9.layer.0.layer_norm.weight', 'decoder.block.3.layer.0.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.o.weight', 'decoder.block.6.layer.0.SelfAttention.o.weight', 'decoder.block.3.layer.1.layer_norm.weight', 'decoder.block.9.layer.0.SelfAttention.q.weight', 'decoder.block.7.layer.1.EncDecAttention.k.weight', 'decoder.block.4.layer.0.SelfAttention.v.weight', 'decoder.block.7.layer.0.SelfAttention.o.weight', 'decoder.block.8.layer.2.DenseReluDense.wo.weight', 'decoder.block.5.layer.1.EncDecAttention.k.weight', 'decoder.block.5.layer.1.layer_norm.weight', 'decoder.block.8.layer.2.layer_norm.weight', 'decoder.block.10.layer.2.DenseReluDense.wo.weight', 'decoder.block.4.layer.0.SelfAttention.o.weight', 'decoder.block.2.layer.2.layer_norm.weight', 'decoder.block.10.layer.1.EncDecAttention.v.weight', 'decoder.block.11.layer.1.layer_norm.weight', 'decoder.block.2.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.1.EncDecAttention.o.weight', 'decoder.block.3.layer.1.EncDecAttention.v.weight', 'decoder.block.5.layer.0.SelfAttention.v.weight', 'decoder.block.3.layer.1.EncDecAttention.k.weight', 'decoder.block.2.layer.0.SelfAttention.v.weight', 'decoder.block.11.layer.2.DenseReluDense.wi.weight', 'decoder.block.9.layer.1.EncDecAttention.q.weight', 'decoder.block.6.layer.1.EncDecAttention.k.weight', 'decoder.block.0.layer.0.SelfAttention.relative_attention_bias.weight', 'decoder.block.11.layer.1.EncDecAttention.v.weight', 'decoder.block.0.layer.1.EncDecAttention.k.weight', 'decoder.block.1.layer.1.EncDecAttention.k.weight', 'decoder.block.9.layer.0.SelfAttention.o.weight', 'decoder.block.6.layer.1.EncDecAttention.o.weight', 'decoder.block.6.layer.2.DenseReluDense.wo.weight', 'decoder.block.11.layer.0.layer_norm.weight', 'decoder.block.3.layer.0.SelfAttention.v.weight', 'decoder.block.9.layer.2.layer_norm.weight', 'decoder.block.1.layer.1.EncDecAttention.v.weight', 'decoder.block.2.layer.2.DenseReluDense.wo.weight', 'decoder.block.11.layer.1.EncDecAttention.q.weight', 'decoder.block.7.layer.0.SelfAttention.v.weight', 'decoder.block.10.layer.1.layer_norm.weight', 'decoder.block.8.layer.2.DenseReluDense.wi.weight', 'decoder.block.10.layer.2.DenseReluDense.wi.weight', 'decoder.block.2.layer.2.DenseReluDense.wi.weight', 'decoder.block.2.layer.1.layer_norm.weight', 'decoder.block.1.layer.0.SelfAttention.k.weight', 'decoder.block.5.layer.0.layer_norm.weight', 'decoder.block.7.layer.0.SelfAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.o.weight', 'decoder.block.6.layer.0.SelfAttention.v.weight', 'decoder.block.6.layer.1.EncDecAttention.v.weight', 'decoder.block.4.layer.2.DenseReluDense.wi.weight', 'decoder.block.11.layer.2.DenseReluDense.wo.weight', 'decoder.block.1.layer.0.layer_norm.weight', 'decoder.block.4.layer.1.EncDecAttention.q.weight', 'decoder.block.7.layer.2.DenseReluDense.wi.weight', 'decoder.block.0.layer.1.EncDecAttention.relative_attention_bias.weight', 'decoder.block.0.layer.0.SelfAttention.o.weight', 'decoder.block.4.layer.2.layer_norm.weight', 'decoder.block.10.layer.0.layer_norm.weight', 'decoder.block.3.layer.2.layer_norm.weight', 'decoder.block.10.layer.0.SelfAttention.k.weight', 'decoder.block.4.layer.0.layer_norm.weight', 'decoder.block.9.layer.1.layer_norm.weight', 'decoder.block.0.layer.0.SelfAttention.k.weight', 'decoder.block.5.layer.0.SelfAttention.k.weight', 'decoder.block.11.layer.0.SelfAttention.o.weight', 'decoder.block.10.layer.1.EncDecAttention.o.weight', 'decoder.block.5.layer.1.EncDecAttention.v.weight', 'decoder.block.8.layer.1.layer_norm.weight', 'decoder.block.5.layer.2.DenseReluDense.wo.weight', 'decoder.block.3.layer.0.SelfAttention.q.weight', 'decoder.block.4.layer.1.layer_norm.weight', 'decoder.block.0.layer.0.layer_norm.weight', 'decoder.block.5.layer.0.SelfAttention.q.weight', 'decoder.block.0.layer.1.EncDecAttention.v.weight', 'decoder.block.6.layer.2.layer_norm.weight', 'decoder.block.8.layer.0.SelfAttention.v.weight', 'decoder.block.2.layer.1.EncDecAttention.q.weight', 'decoder.block.6.layer.0.SelfAttention.k.weight', 'decoder.block.7.layer.0.SelfAttention.k.weight', 'decoder.block.8.layer.1.EncDecAttention.q.weight', 'decoder.block.9.layer.1.EncDecAttention.o.weight', 'decoder.block.1.layer.2.layer_norm.weight', 'decoder.block.6.layer.2.DenseReluDense.wi.weight', 'decoder.block.9.layer.2.DenseReluDense.wo.weight', 'decoder.block.4.layer.0.SelfAttention.k.weight', 'decoder.block.6.layer.1.layer_norm.weight', 'decoder.block.5.layer.1.EncDecAttention.q.weight', 'decoder.block.9.layer.0.SelfAttention.v.weight', 'decoder.block.11.layer.0.SelfAttention.q.weight', 'decoder.block.8.layer.0.layer_norm.weight', 'decoder.block.10.layer.0.SelfAttention.o.weight', 'decoder.block.1.layer.1.EncDecAttention.q.weight', 'decoder.block.7.layer.1.EncDecAttention.q.weight', 'decoder.block.3.layer.0.SelfAttention.k.weight', 'decoder.block.1.layer.0.SelfAttention.v.weight', 'decoder.block.6.layer.1.EncDecAttention.q.weight', 'decoder.block.2.layer.0.SelfAttention.k.weight', 'decoder.block.3.layer.2.DenseReluDense.wi.weight', 'decoder.block.0.layer.0.SelfAttention.q.weight', 'decoder.block.10.layer.2.layer_norm.weight', 'decoder.block.7.layer.1.layer_norm.weight', 'decoder.block.5.layer.1.EncDecAttention.o.weight', 'decoder.block.4.layer.1.EncDecAttention.v.weight']
+- This IS expected if you are initializing T5EncoderModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing T5EncoderModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.606875}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.67525}
+ - Average validation metrics: accuracy={'accuracy': 0.7119266055045872}
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.7815}
+ - Average validation metrics: accuracy={'accuracy': 0.7516819571865443}
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.869125}
+ - Average validation metrics: accuracy={'accuracy': 0.7525993883792049}
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.91725}
+ - Average validation metrics: accuracy={'accuracy': 0.7672782874617737}
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.944875}
+ - Average validation metrics: accuracy={'accuracy': 0.7654434250764526}
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.953625}
+ - Average validation metrics: accuracy={'accuracy': 0.7688073394495413}
+Epoch 8 training:
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.97075}
+ - Average validation metrics: accuracy={'accuracy': 0.7654434250764526}
+Epoch 9 training:
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.97375}
+ - Average validation metrics: accuracy={'accuracy': 0.7657492354740061}
+torch.cuda.memory_allocated: 0.819738GB
+torch.cuda.memory_reserved: 9.234375GB
+torch.cuda.max_memory_reserved: 9.234375GB
+Tue Mar 14 17:20:46 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:46:00.0 Off |                    0 |
+|  0%   69C    P0   232W / 300W |  11127MiB / 46068MiB |     49%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1462281      C   ...a/envs/pytorch/bin/python    11125MiB |
++-----------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.7657492354740061}
+ - Average TEST metrics: accuracy={'accuracy': 0.7701471618780659}
