@@ -1,0 +1,70 @@
+srun: job 1586601 queued and waiting for resources
+srun: job 1586601 has been allocated resources
+Found cached dataset boolq (/u/yli8/.cache/huggingface/datasets/boolq/default/0.1.0/bf0dd57da941c50de94ae3ce3cef7fea48c08f337a4b7aac484e9dddc5aa24e5)
+Specified arguments: Namespace(batch_size=128, device='cuda', experiment='train', graph_name='work_dirs/BERT-large-cased_lr5e-3_epoch20_bs128//plot', lr=0.005, model='BERT-large-cased', num_epochs=20, small_subset=False)
+Loading the dataset ...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 34.04it/s]
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Downloading (…)okenizer_config.json:   0%|          | 0.00/29.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 29.0/29.0 [00:00<00:00, 16.8kB/s]
+Downloading (…)lve/main/config.json:   0%|          | 0.00/762 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 762/762 [00:00<00:00, 548kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|          | 0.00/213k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 213k/213k [00:00<00:00, 3.73MB/s]
+Downloading (…)/main/tokenizer.json:   0%|          | 0.00/436k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 436k/436k [00:00<00:00, 5.20MB/s]
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Downloading pytorch_model.bin:   0%|          | 0.00/1.34G [00:00<?, ?B/s]Downloading pytorch_model.bin:   1%|          | 10.5M/1.34G [00:00<00:13, 100MB/s]Downloading pytorch_model.bin:   2%|▏         | 31.5M/1.34G [00:00<00:09, 137MB/s]Downloading pytorch_model.bin:   5%|▌         | 73.4M/1.34G [00:00<00:05, 216MB/s]Downloading pytorch_model.bin:   9%|▊         | 115M/1.34G [00:00<00:04, 252MB/s] Downloading pytorch_model.bin:  11%|█         | 147M/1.34G [00:00<00:04, 262MB/s]Downloading pytorch_model.bin:  14%|█▍        | 189M/1.34G [00:00<00:04, 283MB/s]Downloading pytorch_model.bin:  17%|█▋        | 231M/1.34G [00:00<00:03, 294MB/s]Downloading pytorch_model.bin:  20%|██        | 273M/1.34G [00:01<00:03, 305MB/s]Downloading pytorch_model.bin:  23%|██▎       | 304M/1.34G [00:01<00:06, 172MB/s]Downloading pytorch_model.bin:  25%|██▌       | 336M/1.34G [00:01<00:08, 118MB/s]Downloading pytorch_model.bin:  27%|██▋       | 367M/1.34G [00:02<00:12, 80.2MB/s]Downloading pytorch_model.bin:  31%|███       | 409M/1.34G [00:02<00:08, 109MB/s] Downloading pytorch_model.bin:  33%|███▎      | 440M/1.34G [00:02<00:06, 131MB/s]Downloading pytorch_model.bin:  35%|███▌      | 472M/1.34G [00:03<00:05, 145MB/s]Downloading pytorch_model.bin:  38%|███▊      | 503M/1.34G [00:03<00:05, 166MB/s]Downloading pytorch_model.bin:  40%|███▉      | 535M/1.34G [00:03<00:04, 192MB/s]Downloading pytorch_model.bin:  42%|████▏     | 566M/1.34G [00:03<00:03, 214MB/s]Downloading pytorch_model.bin:  45%|████▍     | 598M/1.34G [00:03<00:03, 232MB/s]Downloading pytorch_model.bin:  48%|████▊     | 640M/1.34G [00:03<00:02, 256MB/s]Downloading pytorch_model.bin:  50%|█████     | 671M/1.34G [00:03<00:03, 189MB/s]Downloading pytorch_model.bin:  52%|█████▏    | 703M/1.34G [00:04<00:03, 163MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 734M/1.34G [00:04<00:03, 187MB/s]Downloading pytorch_model.bin:  58%|█████▊    | 776M/1.34G [00:04<00:02, 225MB/s]Downloading pytorch_model.bin:  61%|██████    | 818M/1.34G [00:04<00:02, 253MB/s]Downloading pytorch_model.bin:  64%|██████▍   | 860M/1.34G [00:04<00:01, 272MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 902M/1.34G [00:04<00:01, 282MB/s]Downloading pytorch_model.bin:  70%|███████   | 944M/1.34G [00:04<00:01, 304MB/s]Downloading pytorch_model.bin:  74%|███████▎  | 986M/1.34G [00:05<00:01, 245MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 1.02G/1.34G [00:05<00:01, 247MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 1.05G/1.34G [00:05<00:01, 150MB/s]Downloading pytorch_model.bin:  81%|████████  | 1.08G/1.34G [00:05<00:01, 168MB/s]Downloading pytorch_model.bin:  83%|████████▎ | 1.11G/1.34G [00:05<00:01, 173MB/s]Downloading pytorch_model.bin:  85%|████████▌ | 1.14G/1.34G [00:06<00:01, 170MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 1.17G/1.34G [00:06<00:00, 173MB/s]Downloading pytorch_model.bin:  91%|█████████ | 1.22G/1.34G [00:06<00:00, 215MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 1.25G/1.34G [00:06<00:00, 234MB/s]Downloading pytorch_model.bin:  96%|█████████▌| 1.28G/1.34G [00:06<00:00, 246MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 1.31G/1.34G [00:06<00:00, 256MB/s]Downloading pytorch_model.bin: 100%|██████████| 1.34G/1.34G [00:07<00:00, 164MB/s]Downloading pytorch_model.bin: 100%|██████████| 1.34G/1.34G [00:07<00:00, 188MB/s]
+Some weights of the model checkpoint at BERT-large-cased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at BERT-large-cased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.561875}
+Traceback (most recent call last):
+  File "classification.py", line 285, in <module>
+    train_acc_rec, eval_acc_rec = train(
+  File "classification.py", line 184, in train
+    val_accuracy = evaluate_model(mymodel, validation_dataloader, device)
+  File "classification.py", line 95, in evaluate_model
+    output = model(input_ids=input_ids, attention_mask=attention_mask)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1563, in forward
+    outputs = self.bert(
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1019, in forward
+    encoder_outputs = self.encoder(
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 609, in forward
+    layer_outputs = layer_module(
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 537, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/pytorch_utils.py", line 249, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 550, in feed_forward_chunk
+    layer_output = self.output(intermediate_output, attention_output)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 464, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/modules/normalization.py", line 173, in forward
+    return F.layer_norm(
+  File "/u/yli8/.conda/envs/pytorch/lib/python3.8/site-packages/torch/nn/functional.py", line 2346, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+RuntimeError: CUDA out of memory. Tried to allocate 64.00 MiB (GPU 0; 44.43 GiB total capacity; 42.73 GiB already allocated; 46.75 MiB free; 42.75 GiB reserved in total by PyTorch)
+srun: error: gpub049: task 0: Exited with exit code 1

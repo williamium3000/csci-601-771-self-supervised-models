@@ -1,0 +1,133 @@
+srun: job 1586591 queued and waiting for resources
+srun: job 1586591 has been allocated resources
+Found cached dataset boolq (/u/yli8/.cache/huggingface/datasets/boolq/default/0.1.0/bf0dd57da941c50de94ae3ce3cef7fea48c08f337a4b7aac484e9dddc5aa24e5)
+Specified arguments: Namespace(batch_size=32, device='cuda', experiment='train', graph_name='work_dirs/distilbert-base-uncased_lr1e-4_epoch20_bs32//plot', lr=0.0001, model='distilbert-base-uncased', num_epochs=20, small_subset=False)
+Loading the dataset ...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  3.44it/s]100%|██████████| 2/2 [00:00<00:00,  6.79it/s]
+Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForSequenceClassification: ['vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.bias', 'vocab_projector.weight', 'vocab_layer_norm.bias', 'vocab_layer_norm.weight']
+- This IS expected if you are initializing DistilBertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DistilBertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'pre_classifier.bias', 'classifier.weight', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.636875}
+ - Average validation metrics: accuracy={'accuracy': 0.6587155963302752}
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.70675}
+ - Average validation metrics: accuracy={'accuracy': 0.6577981651376147}
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.8105}
+ - Average validation metrics: accuracy={'accuracy': 0.6220183486238532}
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.886875}
+ - Average validation metrics: accuracy={'accuracy': 0.6828746177370031}
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.933}
+ - Average validation metrics: accuracy={'accuracy': 0.6889908256880733}
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.960125}
+ - Average validation metrics: accuracy={'accuracy': 0.6914373088685015}
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.97175}
+ - Average validation metrics: accuracy={'accuracy': 0.6908256880733945}
+Epoch 8 training:
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.977875}
+ - Average validation metrics: accuracy={'accuracy': 0.6948012232415902}
+Epoch 9 training:
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.9865}
+ - Average validation metrics: accuracy={'accuracy': 0.6877675840978593}
+Epoch 10 training:
+ ===> Epoch 10
+ - Average training metrics: accuracy={'accuracy': 0.989375}
+ - Average validation metrics: accuracy={'accuracy': 0.6703363914373088}
+Epoch 11 training:
+ ===> Epoch 11
+ - Average training metrics: accuracy={'accuracy': 0.992}
+ - Average validation metrics: accuracy={'accuracy': 0.6828746177370031}
+Epoch 12 training:
+ ===> Epoch 12
+ - Average training metrics: accuracy={'accuracy': 0.99325}
+ - Average validation metrics: accuracy={'accuracy': 0.6902140672782875}
+Epoch 13 training:
+ ===> Epoch 13
+ - Average training metrics: accuracy={'accuracy': 0.994375}
+ - Average validation metrics: accuracy={'accuracy': 0.6892966360856269}
+Epoch 14 training:
+ ===> Epoch 14
+ - Average training metrics: accuracy={'accuracy': 0.995875}
+ - Average validation metrics: accuracy={'accuracy': 0.690519877675841}
+Epoch 15 training:
+ ===> Epoch 15
+ - Average training metrics: accuracy={'accuracy': 0.997}
+ - Average validation metrics: accuracy={'accuracy': 0.6822629969418961}
+Epoch 16 training:
+ ===> Epoch 16
+ - Average training metrics: accuracy={'accuracy': 0.99825}
+ - Average validation metrics: accuracy={'accuracy': 0.6810397553516819}
+Epoch 17 training:
+ ===> Epoch 17
+ - Average training metrics: accuracy={'accuracy': 0.998125}
+ - Average validation metrics: accuracy={'accuracy': 0.689908256880734}
+Epoch 18 training:
+ ===> Epoch 18
+ - Average training metrics: accuracy={'accuracy': 0.998375}
+ - Average validation metrics: accuracy={'accuracy': 0.6920489296636085}
+Epoch 19 training:
+ ===> Epoch 19
+ - Average training metrics: accuracy={'accuracy': 0.998625}
+ - Average validation metrics: accuracy={'accuracy': 0.6834862385321101}
+Epoch 20 training:
+ ===> Epoch 20
+ - Average training metrics: accuracy={'accuracy': 0.99925}
+ - Average validation metrics: accuracy={'accuracy': 0.6834862385321101}
+torch.cuda.memory_allocated: 0.512443GB
+torch.cuda.memory_reserved: 4.050781GB
+torch.cuda.max_memory_reserved: 4.050781GB
+Mon Mar 13 01:09:02 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:85:00.0 Off |                    0 |
+|  0%   78C    P0   241W / 300W |   5819MiB / 46068MiB |     60%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    261052      C   ...a/envs/pytorch/bin/python     5817MiB |
++-----------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.6834862385321101}
+ - Average TEST metrics: accuracy={'accuracy': 0.6685353889278206}

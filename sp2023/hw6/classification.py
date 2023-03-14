@@ -9,6 +9,7 @@ from transformers import AutoModelForSequenceClassification
 import argparse
 import subprocess
 
+from matplotlib import pyplot as plt
 
 def print_gpu_memory():
     """
@@ -127,6 +128,8 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
     )
 
     loss = torch.nn.CrossEntropyLoss()
+    train_acc_rec = []
+    eval_acc_rec = []
 
     for epoch in range(num_epochs):
 
@@ -154,12 +157,12 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
             Then, compute the accuracy using the logits and the labels.
             """
 
-            input_ids = batch["input_ids"]
-            attention_mask = batch["attention_mask"]
+            input_ids = batch["input_ids"].to(device)
+            attention_mask = batch["attention_mask"].to(device)
 
             output = mymodel(input_ids=input_ids, attention_mask=attention_mask)
-            predictions = output[1]
-            model_loss = loss(predictions, batch["labels"])
+            predictions = output.logits
+            model_loss = loss(predictions, batch["labels"].to(device))
 
             mymodel.zero_grad()
             model_loss.backward()
@@ -173,12 +176,17 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
             train_accuracy.add_batch(predictions=predictions, references=batch['labels'])
 
         # print evaluation metrics
+        train_acc = train_accuracy.compute()
         print(f" ===> Epoch {epoch + 1}")
-        print(f" - Average training metrics: accuracy={train_accuracy.compute()}")
+        print(f" - Average training metrics: accuracy={train_acc}")
 
         # normally, validation would be more useful when training for many epochs
         val_accuracy = evaluate_model(mymodel, validation_dataloader, device)
         print(f" - Average validation metrics: accuracy={val_accuracy}")
+        train_acc_rec.append(train_acc["accuracy"])
+        eval_acc_rec.append(val_accuracy["accuracy"])
+    
+    return train_acc_rec, eval_acc_rec
 
 
 def pre_process(model_name, batch_size, device, small_subset):
@@ -259,6 +267,8 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--device", type=str, default="cuda")
     parser.add_argument("--model", type=str, default="distilbert-base-uncased")
+    parser.add_argument("--graph-name", type=str, default="name of the plotted graph")
+    
 
     args = parser.parse_args()
     print(f"Specified arguments: {args}")
@@ -272,7 +282,7 @@ if __name__ == "__main__":
                                                                                              args.small_subset)
 
     print(" >>>>>>>>  Starting training ... ")
-    train(
+    train_acc_rec, eval_acc_rec = train(
         mymodel=pretrained_model, 
         num_epochs=args.num_epochs, 
         train_dataloader=train_dataloader, 
@@ -288,3 +298,12 @@ if __name__ == "__main__":
 
     test_accuracy = evaluate_model(pretrained_model, test_dataloader, args.device)
     print(f" - Average TEST metrics: accuracy={test_accuracy}")
+    
+    plt.plot(range(len(train_acc_rec)), train_acc_rec, label="train acc")
+    plt.plot(range(len(eval_acc_rec)), eval_acc_rec, label="val acc")
+    plt.grid()
+    plt.legend()
+    plt.xlabel("epoch")
+    plt.ylabel("accuracy")
+    plt.savefig(f"{args.graph_name}.jpg")
+    

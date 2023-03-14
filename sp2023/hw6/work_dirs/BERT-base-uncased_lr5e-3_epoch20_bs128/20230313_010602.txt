@@ -1,0 +1,138 @@
+srun: job 1586598 queued and waiting for resources
+srun: job 1586598 has been allocated resources
+Found cached dataset boolq (/u/yli8/.cache/huggingface/datasets/boolq/default/0.1.0/bf0dd57da941c50de94ae3ce3cef7fea48c08f337a4b7aac484e9dddc5aa24e5)
+Specified arguments: Namespace(batch_size=128, device='cuda', experiment='train', graph_name='work_dirs/BERT-base-uncased_lr5e-3_epoch20_bs128//plot', lr=0.005, model='BERT-base-uncased', num_epochs=20, small_subset=False)
+Loading the dataset ...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 868.03it/s]
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Downloading (…)okenizer_config.json:   0%|          | 0.00/28.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 28.0/28.0 [00:00<00:00, 16.3kB/s]
+Downloading (…)lve/main/config.json:   0%|          | 0.00/570 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 570/570 [00:00<00:00, 289kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|          | 0.00/232k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 232k/232k [00:00<00:00, 3.87MB/s]
+Downloading (…)/main/tokenizer.json:   0%|          | 0.00/466k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 466k/466k [00:00<00:00, 5.35MB/s]
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Downloading pytorch_model.bin:   0%|          | 0.00/440M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 10.5M/440M [00:00<00:05, 78.1MB/s]Downloading pytorch_model.bin:   5%|▍         | 21.0M/440M [00:00<00:04, 85.7MB/s]Downloading pytorch_model.bin:   7%|▋         | 31.5M/440M [00:00<00:04, 88.5MB/s]Downloading pytorch_model.bin:  10%|▉         | 41.9M/440M [00:00<00:04, 88.3MB/s]Downloading pytorch_model.bin:  12%|█▏        | 52.4M/440M [00:00<00:05, 77.3MB/s]Downloading pytorch_model.bin:  14%|█▍        | 62.9M/440M [00:00<00:04, 82.8MB/s]Downloading pytorch_model.bin:  17%|█▋        | 73.4M/440M [00:00<00:04, 85.3MB/s]Downloading pytorch_model.bin:  19%|█▉        | 83.9M/440M [00:00<00:04, 85.0MB/s]Downloading pytorch_model.bin:  21%|██▏       | 94.4M/440M [00:01<00:04, 81.9MB/s]Downloading pytorch_model.bin:  24%|██▍       | 105M/440M [00:01<00:04, 83.6MB/s] Downloading pytorch_model.bin:  26%|██▌       | 115M/440M [00:01<00:03, 85.6MB/s]Downloading pytorch_model.bin:  29%|██▊       | 126M/440M [00:01<00:03, 87.8MB/s]Downloading pytorch_model.bin:  31%|███       | 136M/440M [00:01<00:03, 83.1MB/s]Downloading pytorch_model.bin:  33%|███▎      | 147M/440M [00:01<00:03, 81.5MB/s]Downloading pytorch_model.bin:  36%|███▌      | 157M/440M [00:01<00:03, 83.3MB/s]Downloading pytorch_model.bin:  38%|███▊      | 168M/440M [00:02<00:03, 74.7MB/s]Downloading pytorch_model.bin:  40%|████      | 178M/440M [00:02<00:03, 73.0MB/s]Downloading pytorch_model.bin:  43%|████▎     | 189M/440M [00:02<00:03, 77.7MB/s]Downloading pytorch_model.bin:  45%|████▌     | 199M/440M [00:02<00:03, 79.9MB/s]Downloading pytorch_model.bin:  48%|████▊     | 210M/440M [00:02<00:02, 82.5MB/s]Downloading pytorch_model.bin:  50%|████▉     | 220M/440M [00:02<00:02, 84.2MB/s]Downloading pytorch_model.bin:  52%|█████▏    | 231M/440M [00:02<00:02, 85.6MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 241M/440M [00:02<00:02, 87.2MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 252M/440M [00:03<00:02, 86.5MB/s]Downloading pytorch_model.bin:  60%|█████▉    | 262M/440M [00:03<00:02, 82.9MB/s]Downloading pytorch_model.bin:  62%|██████▏   | 273M/440M [00:03<00:02, 81.1MB/s]Downloading pytorch_model.bin:  64%|██████▍   | 283M/440M [00:03<00:02, 78.5MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 294M/440M [00:03<00:01, 82.9MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 304M/440M [00:03<00:01, 85.0MB/s]Downloading pytorch_model.bin:  71%|███████▏  | 315M/440M [00:03<00:01, 86.0MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 325M/440M [00:03<00:01, 88.2MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 336M/440M [00:04<00:01, 87.9MB/s]Downloading pytorch_model.bin:  79%|███████▊  | 346M/440M [00:04<00:01, 88.8MB/s]Downloading pytorch_model.bin:  81%|████████  | 357M/440M [00:04<00:00, 88.0MB/s]Downloading pytorch_model.bin:  83%|████████▎ | 367M/440M [00:04<00:00, 85.3MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 377M/440M [00:04<00:00, 87.0MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 388M/440M [00:04<00:00, 87.3MB/s]Downloading pytorch_model.bin:  90%|█████████ | 398M/440M [00:04<00:00, 77.6MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 409M/440M [00:04<00:00, 79.9MB/s]Downloading pytorch_model.bin:  95%|█████████▌| 419M/440M [00:05<00:00, 80.5MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 430M/440M [00:05<00:00, 79.3MB/s]Downloading pytorch_model.bin: 100%|█████████▉| 440M/440M [00:05<00:00, 76.6MB/s]Downloading pytorch_model.bin: 100%|██████████| 440M/440M [00:05<00:00, 82.5MB/s]
+Some weights of the model checkpoint at BERT-base-uncased were not used when initializing BertForSequenceClassification: ['cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at BERT-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Moving model to device ...cuda
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+Epoch 1 training:
+ ===> Epoch 1
+ - Average training metrics: accuracy={'accuracy': 0.60425}
+ - Average validation metrics: accuracy={'accuracy': 0.3782874617737003}
+Epoch 2 training:
+ ===> Epoch 2
+ - Average training metrics: accuracy={'accuracy': 0.618125}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 3 training:
+ ===> Epoch 3
+ - Average training metrics: accuracy={'accuracy': 0.6235}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 4 training:
+ ===> Epoch 4
+ - Average training metrics: accuracy={'accuracy': 0.6225}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 5 training:
+ ===> Epoch 5
+ - Average training metrics: accuracy={'accuracy': 0.6205}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 6 training:
+ ===> Epoch 6
+ - Average training metrics: accuracy={'accuracy': 0.624625}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 7 training:
+ ===> Epoch 7
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 8 training:
+ ===> Epoch 8
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 9 training:
+ ===> Epoch 9
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 10 training:
+ ===> Epoch 10
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 11 training:
+ ===> Epoch 11
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 12 training:
+ ===> Epoch 12
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 13 training:
+ ===> Epoch 13
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 14 training:
+ ===> Epoch 14
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 15 training:
+ ===> Epoch 15
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 16 training:
+ ===> Epoch 16
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 17 training:
+ ===> Epoch 17
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 18 training:
+ ===> Epoch 18
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 19 training:
+ ===> Epoch 19
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+Epoch 20 training:
+ ===> Epoch 20
+ - Average training metrics: accuracy={'accuracy': 0.62475}
+ - Average validation metrics: accuracy={'accuracy': 0.6217125382262997}
+torch.cuda.memory_allocated: 0.823373GB
+torch.cuda.memory_reserved: 24.513672GB
+torch.cuda.max_memory_reserved: 24.513672GB
+Mon Mar 13 01:17:11 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A40          On   | 00000000:85:00.0 Off |                    0 |
+|  0%   76C    P0   261W / 300W |  26773MiB / 46068MiB |     86%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1006488      C   ...a/envs/pytorch/bin/python    26771MiB |
++-----------------------------------------------------------------------------+
+
+ - Average DEV metrics: accuracy={'accuracy': 0.6217125382262997}
+ - Average TEST metrics: accuracy={'accuracy': 0.613875262789068}
