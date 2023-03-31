@@ -55,7 +55,6 @@ for test_case in tqdm.tqdm(dataset['validation'], total=num_test):
     inputs = tokenizer(prompt, return_tensors="pt")["input_ids"].cuda()
     outputs = model.generate(inputs, max_new_tokens=1)
     outputs = tokenizer.decode(outputs[0])
-    print(outputs[-5:])
     pred = bool(outputs[-5:])
     num_correct += (pred == answer)
     rec -= 1
