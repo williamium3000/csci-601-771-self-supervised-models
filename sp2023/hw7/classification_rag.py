@@ -1,16 +1,14 @@
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
-from transformers import AutoTokenizer
 from torch.utils.data import DataLoader
 from datasets import load_dataset
 import evaluate as evaluate
 from transformers import get_scheduler
-from transformers import AutoModelForSequenceClassification
-from transformers import T5Tokenizer, T5EncoderModel, T5Config
+from transformers import AutoTokenizer, RagRetriever, RagSequenceForGeneration
 import argparse
 import subprocess
-
+import tqdm
 
 from matplotlib import pyplot as plt
 
@@ -34,12 +32,13 @@ class BoolQADataset(torch.utils.data.Dataset):
     Dataset for the dataset of BoolQ questions and answers
     """
 
-    def __init__(self, passages, questions, answers, tokenizer, max_len):
+    def __init__(self, passages, questions, answers, tokenizer, max_len, question_only=False):
         self.passages = passages
         self.questions = questions
         self.answers = answers
         self.tokenizer = tokenizer
         self.max_len = max_len
+        self.question_only = question_only
 
     def __len__(self):
         return len(self.answers)
@@ -57,10 +56,13 @@ class BoolQADataset(torch.utils.data.Dataset):
 
         # this is input encoding for your model. Note, question comes first since we are doing question answering
         # and we don't wnt it to be truncated if the passage is too long
-        input_encoding = question + " [SEP] " + passage
+        if self.question_only:
+            input_encoding = question
+        else:
+            input_encoding = question + " [SEP] " + passage
 
         # encode_plus will encode the input and return a dictionary of tensors
-        encoded_review = self.tokenizer.encode_plus(
+        encoded_review = self.tokenizer(
             input_encoding,
             add_special_tokens=True,
             max_length=self.max_len,
@@ -132,7 +134,7 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
     train_acc_rec = []
     eval_acc_rec = []
 
-    for epoch in range(num_epochs):
+    for epoch in tqdm.tqdm(range(num_epochs)):
 
         # put the model in training mode (important that this is done each epoch,
         # since we put the model into eval mode during validation)
@@ -188,12 +190,14 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
     
     return train_acc_rec, eval_acc_rec
 
-class T5FineTuner(nn.Module):
-  def __init__(self, name):
-    super(T5FineTuner, self).__init__()
-    
-    self.model = T5EncoderModel.from_pretrained(name)
-    self.linear_layer = nn.Linear(T5Config.from_pretrained(name).d_model, 2)
+class RAGFineTuner(nn.Module):
+  def __init__(self):
+    super(RAGFineTuner, self).__init__()
+    retriever = RagRetriever.from_pretrained(
+        "facebook/rag-sequence-nq", index_name="exact", use_dummy_dataset=True
+    )
+    self.model = RagSequenceForGeneration.from_pretrained("facebook/rag-token-nq", retriever=retriever)
+    self.linear_layer = nn.Linear(768, 2)
   
   def forward(
       self, input_ids, **kwargs
@@ -202,10 +206,10 @@ class T5FineTuner(nn.Module):
         input_ids,
         **kwargs
     )
-    logits = self.linear_layer(output.last_hidden_state.mean(dim=1))
+    logits = self.linear_layer(output.question_encoder_last_hidden_state)
     return logits
 
-def pre_process(model_name, batch_size, device, small_subset):
+def pre_process(batch_size, device, small_subset, question_only):
     # download dataset
     print("Loading the dataset ...")
     dataset = load_dataset("boolq")
@@ -234,7 +238,7 @@ def pre_process(model_name, batch_size, device, small_subset):
     max_len = 128
 
     print("Loading the tokenizer...")
-    mytokenizer = T5Tokenizer.from_pretrained(model_name)
+    mytokenizer = AutoTokenizer.from_pretrained("facebook/rag-sequence-nq")
 
     print("Loding the data into DS...")
     train_dataset = BoolQADataset(
@@ -242,21 +246,24 @@ def pre_process(model_name, batch_size, device, small_subset):
         questions=list(dataset_train_subset['question']),
         answers=list(dataset_train_subset['answer']),
         tokenizer=mytokenizer,
-        max_len=max_len
+        max_len=max_len,
+        question_only=question_only
     )
     validation_dataset = BoolQADataset(
         passages=list(dataset_dev_subset['passage']),
         questions=list(dataset_dev_subset['question']),
         answers=list(dataset_dev_subset['answer']),
         tokenizer=mytokenizer,
-        max_len=max_len
+        max_len=max_len,
+        question_only=question_only
     )
     test_dataset = BoolQADataset(
         passages=list(dataset_test_subset['passage']),
         questions=list(dataset_test_subset['question']),
         answers=list(dataset_test_subset['answer']),
         tokenizer=mytokenizer,
-        max_len=max_len
+        max_len=max_len,
+        question_only=question_only
     )
 
     print(" >>>>>>>> Initializing the data loaders ... ")
@@ -266,7 +273,7 @@ def pre_process(model_name, batch_size, device, small_subset):
 
     # from Hugging Face (transformers), read their documentation to do this.
     print("Loading the model ...")
-    pretrained_model = T5FineTuner(model_name)
+    pretrained_model = RAGFineTuner()
 
     print("Moving model to device ..." + str(device))
     pretrained_model.to(device)
@@ -282,8 +289,8 @@ if __name__ == "__main__":
     parser.add_argument("--lr", type=float, default=5e-5)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--device", type=str, default="cuda")
-    parser.add_argument("--model", type=str, default="distilbert-base-uncased")
     parser.add_argument("--graph-name", type=str, default="name of the plotted graph")
+    parser.add_argument("--question-only", action='store_true')
     
 
     args = parser.parse_args()
@@ -292,11 +299,13 @@ if __name__ == "__main__":
     assert type(args.small_subset) == bool, "small_subset must be a boolean"
 
     # load the data and models
-    pretrained_model, train_dataloader, validation_dataloader, test_dataloader = pre_process(args.model,
-                                                                                             args.batch_size,
+    pretrained_model, train_dataloader, validation_dataloader, test_dataloader = pre_process(args.batch_size,
                                                                                              args.device,
-                                                                                             args.small_subset)
-
+                                                                                             args.small_subset,
+                                                                                             args.question_only)
+    # print the GPU memory usage just to make sure things are alright
+    print_gpu_memory()
+    
     print(" >>>>>>>>  Starting training ... ")
     train_acc_rec, eval_acc_rec = train(
         mymodel=pretrained_model, 

@@ -1,6 +1,7 @@
 from transformers import BloomTokenizerFast 
 from petals import DistributedBloomForCausalLM
 from datasets import load_dataset
+import tqdm
 
 dataset = load_dataset("boolq")
 dataset = dataset.shuffle()  # shuffle the data
@@ -22,7 +23,7 @@ for sample in dataset['train']:
             num_true -= 1
 
 prefix = "Consider the the problem with the following examples:\n"
-for pos_sample, neg_sample in zip(pos_data, neg_data):
+for pos_sample, neg_sample in tqdm.tqdm(zip(pos_data, neg_data)):
     passage = neg_sample["passage"]
     question = neg_sample["question"]
     answer = neg_sample["answer"]
@@ -38,7 +39,7 @@ for pos_sample, neg_sample in zip(pos_data, neg_data):
 
 
 
-MODEL_NAME = "bigscience/bloomz-petals"
+MODEL_NAME = "bigscience/bloom-petals"
 tokenizer = BloomTokenizerFast.from_pretrained(MODEL_NAME)
 model = DistributedBloomForCausalLM.from_pretrained(MODEL_NAME)
 model.cuda()
@@ -46,12 +47,10 @@ num_test = 30
 
 rec = num_test
 num_correct = 0
-
-for test_case in dataset['validation']:
+for test_case in tqdm.tqdm(dataset['validation'], total=num_test):
     passage = test_case["passage"]
     question = test_case["question"]
     answer = test_case["answer"]
-    
     prompt = prefix + f"passage: {passage}\n question: {question} \n answer: "
     inputs = tokenizer(prompt, return_tensors="pt")["input_ids"].cuda()
     outputs = model.generate(inputs, max_new_tokens=1)

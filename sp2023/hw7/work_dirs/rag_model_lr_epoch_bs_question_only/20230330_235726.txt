@@ -1,0 +1,8 @@
+srun: job 1640212 queued and waiting for resources
+srun: job 1640212 has been allocated resources
+usage: classification_rag.py [-h] [--experiment EXPERIMENT] [--small_subset]
+                             [--num_epochs NUM_EPOCHS] [--lr LR]
+                             [--batch_size BATCH_SIZE] [--device DEVICE]
+                             [--graph-name GRAPH_NAME] [--question-only]
+classification_rag.py: error: argument --batch_size: expected one argument
+srun: error: gpua022: task 0: Exited with exit code 2
