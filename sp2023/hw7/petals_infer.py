@@ -1,4 +1,3 @@
-import os
 from transformers import BloomTokenizerFast 
 from petals import DistributedBloomForCausalLM
 from datasets import load_dataset
@@ -39,10 +38,10 @@ for pos_sample, neg_sample in zip(pos_data, neg_data):
 
 
 
-MODEL_NAME = "bigscience/bloom-petals"
+MODEL_NAME = "bigscience/bloomz-petals"
 tokenizer = BloomTokenizerFast.from_pretrained(MODEL_NAME)
 model = DistributedBloomForCausalLM.from_pretrained(MODEL_NAME)
-
+model.cuda()
 num_test = 30
 
 rec = num_test
@@ -54,10 +53,11 @@ for test_case in dataset['validation']:
     answer = test_case["answer"]
     
     prompt = prefix + f"passage: {passage}\n question: {question} \n answer: "
-    inputs = tokenizer(prompt)["input_ids"]
-    outputs = model.generate(inputs, max_new_tokens=10)
-    print(outputs)
-    pred = bool(response[0]["generated_text"][-5:])
+    inputs = tokenizer(prompt, return_tensors="pt")["input_ids"].cuda()
+    outputs = model.generate(inputs, max_new_tokens=1)
+    outputs = tokenizer.decode(outputs[0])
+    print(outputs[-5:])
+    pred = bool(outputs[-5:])
     num_correct += (pred == answer)
     rec -= 1
     if rec == 0:
