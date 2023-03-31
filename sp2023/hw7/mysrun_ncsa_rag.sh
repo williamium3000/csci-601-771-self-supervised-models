@@ -11,7 +11,7 @@ now=$(date +"%Y%m%d_%H%M%S")
 
 mkdir -p $save_path
 
-srun -p gpuA100x4 -n 1 --gres=gpu:1 --ntasks-per-node=1 --cpus-per-task=3 --job-name=$job --mem-per-cpu=16GB --time 00-20:00:00 -A bbrt-delta-gpu  \
+srun -p gpuA40x4 -n 1 --gres=gpu:1 --ntasks-per-node=1 --cpus-per-task=3 --job-name=$job --mem-per-cpu=16GB --time 00-20:00:00 -A bbrt-delta-gpu  \
 python sp2023/hw7/classification_rag.py  \
 --experiment "train" --graph-name ${save_path}/plot \
 --device cuda \

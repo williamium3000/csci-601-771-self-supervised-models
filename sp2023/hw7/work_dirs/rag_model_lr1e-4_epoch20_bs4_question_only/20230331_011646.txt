@@ -1,0 +1,78 @@
+srun: job 1640246 queued and waiting for resources
+srun: job 1640246 has been allocated resources
+Found cached dataset boolq (/u/yli8/.cache/huggingface/datasets/boolq/default/0.1.0/bf0dd57da941c50de94ae3ce3cef7fea48c08f337a4b7aac484e9dddc5aa24e5)
+Specified arguments: Namespace(batch_size=4, device='cuda', experiment='train', graph_name='sp2023/hw7/work_dirs/rag_model_lr1e-4_epoch20_bs4_question_only//plot', lr=0.0001, num_epochs=20, question_only=True, small_subset=False)
+Loading the dataset ...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 826.79it/s]
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'DPRQuestionEncoderTokenizer'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'DPRQuestionEncoderTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'BartTokenizer'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'BartTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'DPRQuestionEncoderTokenizer'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'DPRQuestionEncoderTokenizerFast'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'BartTokenizer'.
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'RagTokenizer'. 
+The class this function is called from is 'BartTokenizerFast'.
+Found cached dataset wiki_dpr (/u/yli8/.cache/huggingface/datasets/wiki_dpr/dummy.psgs_w100.nq.no_index-dummy=True,with_index=False/0.0.0/74d4bff38a7c18a9498fafef864a8ba7129e27cb8d71b22f5e14d84cb17edd54)
+Found cached dataset wiki_dpr (/u/yli8/.cache/huggingface/datasets/wiki_dpr/dummy.psgs_w100.nq.exact-ce970d5f816ae529/0.0.0/74d4bff38a7c18a9498fafef864a8ba7129e27cb8d71b22f5e14d84cb17edd54)
+/u/yli8/.conda/envs/pytorch2.0/lib/python3.8/site-packages/transformers/models/bart/configuration_bart.py:179: UserWarning: Please make sure the config includes `forced_bos_token_id=0` in future versions. The config can simply be saved and uploaded again to be fixed.
+  warnings.warn(
+Some weights of the model checkpoint at facebook/rag-token-nq were not used when initializing RagSequenceForGeneration: ['rag.question_encoder.question_encoder.bert_model.pooler.dense.bias', 'rag.question_encoder.question_encoder.bert_model.pooler.dense.weight']
+- This IS expected if you are initializing RagSequenceForGeneration from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RagSequenceForGeneration from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RagSequenceForGeneration were not initialized from the model checkpoint at facebook/rag-token-nq and are newly initialized: ['rag.generator.lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Slicing the data...
+Size of the loaded dataset:
+ - train: 8000
+ - dev: 3270
+ - test: 1427
+Loading the tokenizer...
+Loding the data into DS...
+ >>>>>>>> Initializing the data loaders ... 
+Loading the model ...
+Moving model to device ...cuda
+torch.cuda.memory_allocated: 1.920463GB
+torch.cuda.memory_reserved: 1.964844GB
+torch.cuda.max_memory_reserved: 1.964844GB
+Fri Mar 31 01:17:18 2023       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   28C    P0    63W / 400W |   2504MiB / 40960MiB |     38%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   1925082      C   ...nvs/pytorch2.0/bin/python     2501MiB |
++-----------------------------------------------------------------------------+
+
+ >>>>>>>>  Starting training ... 
+ >>>>>>>>  Initializing optimizer
+here1
+here2
+here3

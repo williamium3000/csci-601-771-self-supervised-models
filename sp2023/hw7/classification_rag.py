@@ -121,7 +121,6 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
     # instantiate it on the untrained model parameters with a learning rate of 5e-5
     print(" >>>>>>>>  Initializing optimizer")
     optimizer = torch.optim.AdamW(mymodel.parameters(), lr=lr)
-
     # now, we set up the learning rate scheduler
     lr_scheduler = get_scheduler(
         "linear",
@@ -129,23 +128,19 @@ def train(mymodel, num_epochs, train_dataloader, validation_dataloader, device, 
         num_warmup_steps=50,
         num_training_steps=len(train_dataloader) * num_epochs
     )
-
     loss = torch.nn.CrossEntropyLoss()
     train_acc_rec = []
     eval_acc_rec = []
-
-    for epoch in tqdm.tqdm(range(num_epochs)):
+    for epoch in range(num_epochs):
 
         # put the model in training mode (important that this is done each epoch,
         # since we put the model into eval mode during validation)
         mymodel.train()
-
         # load metrics
         train_accuracy = evaluate.load('accuracy')
-
         print(f"Epoch {epoch + 1} training:")
 
-        for i, batch in enumerate(train_dataloader):
+        for i, batch in tqdm.tqdm(enumerate(train_dataloader)):
 
             """
             You need to make some changes here to make this function work.
